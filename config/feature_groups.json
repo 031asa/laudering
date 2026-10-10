@@ -1,0 +1,594 @@
+{
+  "version": "1.2",
+  "updated": "2026-09-15",
+  "status": "design_only_not_computed_not_trained",
+  "objective": "Candidate transaction and graph relationship features for GNN research",
+  "groups": {
+    "T": "Shared transaction, account/pair behavior and bank preference; includes simple one-hop statistics",
+    "G": "Additional network patterns and multi-account structure"
+  },
+  "graph_initial_scope": {
+    "history_hours": 24,
+    "cycle_total_edges": 3,
+    "path_max_total_edges_including_current": 3,
+    "common_neighbors": "historical shared payers and payees",
+    "timestamp_rule": "history timestamp < target timestamp; path timestamps strictly increasing",
+    "high_degree_policy": "profile cost on train; if bounded search is needed freeze label-independent bounds before evaluation and report truncation"
+  },
+  "excludes": [
+    "labels_as_features",
+    "full_train_bank_label_rates",
+    "Patterns annotations",
+    "future_edges",
+    "entity_mapping_without_asof_assumption"
+  ],
+  "families": [
+    {
+      "id": "B01",
+      "name": "当前支付方式 payment_format",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "B02",
+      "name": "当前是否ACH is_ach",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "B03",
+      "name": "当前付款/收款币种及是否跨币种",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "B04",
+      "name": "当前付款/收款金额",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "B05",
+      "name": "交易时间属性",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "B06",
+      "name": "当前是否跨行",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "B07",
+      "name": "当前是否自转账",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "B08",
+      "name": "当前付款行与收款行编号",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F01",
+      "name": "历史收付次数",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F02",
+      "name": "独立交易对手数",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F03",
+      "name": "对手集中度",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F04",
+      "name": "对手重复程度",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F05",
+      "name": "短时活跃突变",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F06",
+      "name": "观察期新对手",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F07",
+      "name": "最近收款到当前付款间隔",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F08",
+      "name": "历史收付规模",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F09",
+      "name": "相对自身金额偏离",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F10",
+      "name": "相同或近似金额重复",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F11",
+      "name": "跨行广度",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F12",
+      "name": "双向关系",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F13",
+      "name": "先汇集再分散",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F14",
+      "name": "先分散再汇集",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F15",
+      "name": "时序闭环",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F16",
+      "name": "实体活跃规模",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": true,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F17",
+      "name": "活跃时间覆盖",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F18",
+      "name": "交易间隔",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F19",
+      "name": "时间集中程度",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F20",
+      "name": "长间隔后恢复活动",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F21",
+      "name": "收付角色变化",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F22",
+      "name": "当前付款与多时间窗入账规模吻合",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F23",
+      "name": "历史快速转付频率",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F24",
+      "name": "先入后出规模",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F25",
+      "name": "多方入账后单笔较大转出",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F26",
+      "name": "单方入账后多笔转出",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F27",
+      "name": "同一账户对小额后大额",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F28",
+      "name": "多个账户小额联系同一收款方后大额",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F29",
+      "name": "金额逐步抬升",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F30",
+      "name": "小额多笔累计较大",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F31",
+      "name": "金额整齐程度",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F32",
+      "name": "金额分布突然变化",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F33",
+      "name": "金额结构复杂程度",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F34",
+      "name": "对手更替程度",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F35",
+      "name": "当前关系历史强度",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F36",
+      "name": "入出对手重合",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F37",
+      "name": "币种与方式习惯偏离",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F38",
+      "name": "同一对手切换银行账户的代理",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": true,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F39",
+      "name": "有限长度时序链",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F40",
+      "name": "链条传递速度",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F41",
+      "name": "链条金额连续性",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F42",
+      "name": "链条账户与银行广度",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F43",
+      "name": "相同两端的多条中介路径",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F44",
+      "name": "共同来源/共同去向",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F45",
+      "name": "实体内部流转",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": true,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F46",
+      "name": "实体交易在账户间集中程度",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": true,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F47",
+      "name": "多账户同步活动",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": true,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F48",
+      "name": "实体账户接力",
+      "group": "G",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": true,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F49",
+      "name": "ACH 历史使用强度",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F50",
+      "name": "ACH 与其他方式之间的转付",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F51",
+      "name": "当前对手银行的历史份额",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F52",
+      "name": "银行集中度",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F53",
+      "name": "银行关系是否近期首次出现",
+      "group": "T",
+      "planned_in_A": true,
+      "planned_in_B": true,
+      "requires_historical_entity_mapping": false,
+      "status": "planned"
+    },
+    {
+      "id": "F54",
+      "name": "银行偏好变化",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    },
+    {
+      "id": "F55",
+      "name": "同支付方式下的银行份额",
+      "group": "T",
+      "planned_in_A": false,
+      "planned_in_B": false,
+      "requires_historical_entity_mapping": false,
+      "status": "candidate_deferred"
+    }
+  ]
+}

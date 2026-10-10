@@ -1,0 +1,33 @@
+# Local secrets and machine settings
+.env
+.env.*
+!.env.example
+
+# Common generated state
+*.log
+__pycache__/
+.pytest_cache/
+node_modules/
+.venv-gnn-gpu/
+target/
+build/
+dist/
+
+# Runtime data and generated results; keep directory markers
+data/*
+!data/.gitkeep
+result/*
+!result/.gitkeep
+
+# Local exports, transaction-level reports, models and caches
+outputs/
+dashboard/*.html
+!dashboard/template.html
+*.pt
+*.pth
+*.npy
+*.npz
+*.parquet
+*.zip
+*.pem
+*.key

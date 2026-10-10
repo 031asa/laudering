@@ -1,0 +1,9 @@
+# Native Windows Python 3.11, isolated from the Spark and CPU environments.
+# Official CUDA wheel; no torchvision/torchaudio needed for this GNN.
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.7.1+cu126
+numpy==2.3.5
+pyarrow==21.0.0
+pandas==2.3.3
+psutil==7.0.0
+pytest==8.4.2

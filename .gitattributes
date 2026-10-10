@@ -1,0 +1,2 @@
+# Experiment manifests hash exact bytes; do not normalize frozen source files.
+* -text

@@ -1,0 +1,5 @@
+# Reproduce the existing d2l-zh Python 3.8 CPU acceptance environment.
+# Separate from the Python 3.13 data-engineering requirements.txt.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.4.1+cpu
+numpy==1.23.5
