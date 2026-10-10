@@ -8,6 +8,7 @@ import sys
 import time
 import traceback
 from gnn_features.training_state import ProcessLock
+from gnn_features.tune_pipeline import PWSH
 from .common import *
 
 class Paused(RuntimeError): pass
@@ -51,7 +52,7 @@ def run(project=ROOT,resume=False):
                 folder=root/'features'/('transaction_date='+date)
                 if not (folder/'verification.json').exists():
                     if not (folder/'daily_run.json').exists():
-                        command(['powershell.exe','-NoProfile','-File',project/'scripts/daily_gnn.ps1',
+                        command([PWSH,'-NoProfile','-File',project/'scripts/daily_gnn.ps1',
                             '-Archive',archive,'-Output',folder,'-Date',date,'-Cores','2','-Partitions','8','-Resume'],
                             'features_'+date,folder/'daily_run.json')
                     command(py('verify_features','--archive',archive,'--output',folder),
