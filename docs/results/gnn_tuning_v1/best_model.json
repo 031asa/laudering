@@ -1,0 +1,6 @@
+{
+  "name": "lr_only",
+  "path": "result\\gnn_tuning_v1\\trials\\lr_only\\final_model.pt",
+  "sha256": "b8c18e99903dd28f84c8a5d45ded34314f7b7b5a2cd5e25c23495ec5ade57d3a",
+  "validation_threshold": 0.9529672861099243
+}

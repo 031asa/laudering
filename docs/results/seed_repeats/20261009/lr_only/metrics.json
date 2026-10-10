@@ -1,0 +1,1081 @@
+{
+  "status": "completed",
+  "seed": 20261009,
+  "trial": "lr_only",
+  "config_sha256": "4a017ac34929636474848b5e1c90fe9f497066ec1944f736ea2efd6e203de5bc",
+  "model_sha256": "1a927d8a810d139efd53e9d721d06b0ffadd2122790f99a840f3da121f5e32e0",
+  "metrics": {
+    "samples": 4689006,
+    "positives": 6420,
+    "negatives": 4682586,
+    "positive_rate": 0.0013691601162378552,
+    "average_precision": 0.6056514023219455,
+    "pr_auc_definition": "average_precision (step integral)",
+    "roc_auc": 0.9812702579221432,
+    "best_f1": {
+      "threshold": 0.9644439220428467,
+      "samples": 4689006,
+      "positives": 6420,
+      "negatives": 4682586,
+      "alerts": 4145,
+      "tp": 3407,
+      "fp": 738,
+      "fn": 3013,
+      "tn": 4681848,
+      "precision": 0.8219541616405308,
+      "recall": 0.5306853582554517,
+      "f1": 0.644959772834832,
+      "fpr": 0.00015760522070496944
+    },
+    "precision80": {
+      "threshold": 0.9533511996269226,
+      "samples": 4689006,
+      "positives": 6420,
+      "negatives": 4682586,
+      "alerts": 4318,
+      "tp": 3455,
+      "fp": 863,
+      "fn": 2965,
+      "tn": 4681723,
+      "precision": 0.8001389532190829,
+      "recall": 0.5381619937694704,
+      "f1": 0.6435090333395418,
+      "fpr": 0.00018429987190838565
+    },
+    "threshold_0_5": {
+      "threshold": 0.5,
+      "samples": 4689006,
+      "positives": 6420,
+      "negatives": 4682586,
+      "alerts": 17725,
+      "tp": 4322,
+      "fp": 13403,
+      "fn": 2098,
+      "tn": 4669183,
+      "precision": 0.243836389280677,
+      "recall": 0.6732087227414331,
+      "fpr": 0.002862307280635102,
+      "f1": 0.35800372747980946
+    },
+    "threshold_rule": "score >= threshold; complete score ties; F1, precision, threshold"
+  },
+  "precision80": {
+    "threshold": 0.9533511996269226,
+    "samples": 4689006,
+    "positives": 6420,
+    "negatives": 4682586,
+    "alerts": 4318,
+    "tp": 3455,
+    "fp": 863,
+    "fn": 2965,
+    "tn": 4681723,
+    "precision": 0.8001389532190829,
+    "recall": 0.5381619937694704,
+    "fpr": 0.00018429987190838565,
+    "f1": 0.6435090333395418
+  },
+  "non_ach_precision80": {
+    "threshold": 0.9533511996269226,
+    "samples": 4104569,
+    "positives": 715,
+    "negatives": 4103854,
+    "alerts": 0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 715,
+    "tn": 4103854,
+    "precision": null,
+    "recall": 0.0,
+    "fpr": 0.0,
+    "f1": 0.0
+  },
+  "blocks": [
+    {
+      "block": "transaction_date=2022-09-11/hour=00/block=0000",
+      "targets": 32363,
+      "manifest_sha256": "aad82f1e4ddb2e0c0a562364ccb44a7ab5944ed7e6dc0520a397dbf923cb32f3"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=00/block=0001",
+      "targets": 32344,
+      "manifest_sha256": "834950c464fccb081432b00b11808a2eddd827e8e3c63926076c2f9de269408a"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=00/block=0002",
+      "targets": 26148,
+      "manifest_sha256": "f9accf7999e798b1cedfbbc1c8d9bec3953b9686a3713e6d09393b911180f97e"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=01/block=0000",
+      "targets": 30876,
+      "manifest_sha256": "56c462e36c213754a9bc5c7d50cfa9d7deb057ccc5d9352687177602cf5512c7"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=01/block=0001",
+      "targets": 1668,
+      "manifest_sha256": "6b782c797b5fd2c06afd36784976e3f372c5a22edbc2e285fbfdf1aaa7e077d1"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=02/block=0000",
+      "targets": 31057,
+      "manifest_sha256": "60dde537926ba63ee36054bf9106d2909cd12ee21b42cbd3a45da258486c12f8"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=02/block=0001",
+      "targets": 1216,
+      "manifest_sha256": "d6bd2987ee6dbed97dd7755424c413f0c5f4209066649a1d8b762a38e9be8d0c"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=03/block=0000",
+      "targets": 31122,
+      "manifest_sha256": "c55be1b32a2d272711c409735c74cc71ae8b416ebb18aca5829c0d9d3cd63d7c"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=03/block=0001",
+      "targets": 665,
+      "manifest_sha256": "e344fa89003c06386413273ee69aecf80257e6c946de2cba56ec641abc024eba"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=04/block=0000",
+      "targets": 30954,
+      "manifest_sha256": "90abed2b1b19c36402e4a53a8f038646bbc10d4c35c9b21252cfc3989db35886"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=04/block=0001",
+      "targets": 1227,
+      "manifest_sha256": "cbe23659cc8f4b405eccdb7253ebfbff86517d11077c77cf408db47c09045437"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=05/block=0000",
+      "targets": 30753,
+      "manifest_sha256": "8a4dc1b5743fd813d3cb0e440097a507c53f2d2eecb28fad3c0a8c484e750c32"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=05/block=0001",
+      "targets": 1779,
+      "manifest_sha256": "cb8e6e0297436d2934f0b36dd8adc3e964b1aec4b20dda98bdba09a131ef5fe2"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=06/block=0000",
+      "targets": 30788,
+      "manifest_sha256": "4ae1880f3815d562d866e0519e0c2597ad28c1577cb35291cb950fd8012b95cf"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=06/block=0001",
+      "targets": 1130,
+      "manifest_sha256": "27f9985881741329eca22404dc2b7568921c7c477449cf4a5b29ad03b6b3ec15"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=07/block=0000",
+      "targets": 30964,
+      "manifest_sha256": "18cc933e9e30286d3a8ffe155d5dff4fe029eb714ed7937cef06257a706730c9"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=07/block=0001",
+      "targets": 905,
+      "manifest_sha256": "079171a8edcd9cb5e2ec8d6afa565f96d1ddd19e6dbc76c6694a72dd75543fd6"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=08/block=0000",
+      "targets": 30821,
+      "manifest_sha256": "cd1e12a79952a9e67a321ec9d887e5bd016b75f8574fafea7811125240be2138"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=08/block=0001",
+      "targets": 1482,
+      "manifest_sha256": "8777ebe11627ffb9947c435aa2f61aba94282342190266a74c32826d0ac6a4a6"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=09/block=0000",
+      "targets": 31099,
+      "manifest_sha256": "1a8a134b0b2239221c0171bb7a7fd2dcad70f323e49273ce829be8ee71806e33"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=09/block=0001",
+      "targets": 1177,
+      "manifest_sha256": "4acd81c542dacecc69361d5862d6234516acc8b77b9c0190f7fdd0498d852998"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=10/block=0000",
+      "targets": 31194,
+      "manifest_sha256": "ad0b1051739508cb0c01d1404e46701b71a575c46bfc547560e94b607ba452ef"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=10/block=0001",
+      "targets": 809,
+      "manifest_sha256": "9c021798315589e69e814481d74accf880f1df0cbbd41e4a3be42bdf9cf2544c"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=11/block=0000",
+      "targets": 31093,
+      "manifest_sha256": "f931708d8b71bf65e3106303e06f8a678f01c053584399c88e9e553ff544890a"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=11/block=0001",
+      "targets": 595,
+      "manifest_sha256": "874acc93c3764dcf36ccd18cf7ad6aeb248a4ba009f557c788808425023df723"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=12/block=0000",
+      "targets": 30813,
+      "manifest_sha256": "7f90ff11ba822c0ade20efc678ea35d35602ec653417c004de302e454f25753a"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=12/block=0001",
+      "targets": 1456,
+      "manifest_sha256": "4f1da6a574ac0f3537e5778d466367ed5fd0e036efbdefb0fe9863d76b30d4ce"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=13/block=0000",
+      "targets": 31187,
+      "manifest_sha256": "478d8dfe3d1f6b0d1e8a3093538d040d386b0950ba1bdb44380d8f77b478b5d7"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=13/block=0001",
+      "targets": 1242,
+      "manifest_sha256": "c59eb67accc7f9ed92242d122153a3623c0474a0b1e9eafb4629f3c97946b663"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=14/block=0000",
+      "targets": 30811,
+      "manifest_sha256": "508ed5f67e700838dc7b839441952088c5b85cfca98316dc4c9e26d0293c3e2e"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=14/block=0001",
+      "targets": 1346,
+      "manifest_sha256": "a30b76ab0f08020f6c3d1918ccd0744091fb5b0ff04d0fd270ed73b36192748f"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=15/block=0000",
+      "targets": 30923,
+      "manifest_sha256": "850d14e8cc4cdbb9a2ebf2b643a0e5f1ffb9af1df362725a994005c6e0aac568"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=15/block=0001",
+      "targets": 937,
+      "manifest_sha256": "2d01a952843b5a7ed502441dc158c05fc10ca1643d3e5465d8ee751ec37ddd5a"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=16/block=0000",
+      "targets": 30846,
+      "manifest_sha256": "793f397d4c254c68a8582e1f0168b73925622f71798dc1a06c88e23141168a43"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=16/block=0001",
+      "targets": 1295,
+      "manifest_sha256": "deea6651c7f74913c392df9931eac212036c10b6f8bb0ec92eaf325518b8f0e2"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=17/block=0000",
+      "targets": 30981,
+      "manifest_sha256": "4b8a762eebd53464d3c5155329f1ec317348796eacf1dc090ab995918790aa89"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=17/block=0001",
+      "targets": 1436,
+      "manifest_sha256": "2906a0be42a59405833b1a36a1336ce9a8c3b6aee56e909dbbf71c1e3674e564"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=18/block=0000",
+      "targets": 30960,
+      "manifest_sha256": "40dee02b64153886b61840a246967c6bc62f0a75ee044c48c8298561867b91b5"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=18/block=0001",
+      "targets": 553,
+      "manifest_sha256": "7a9f023f15432c156d6a89551e3e9e1022c8847380f361a32e3075200c460014"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=19/block=0000",
+      "targets": 30958,
+      "manifest_sha256": "094de2eb3e5cb10eb11555ba5889d8ebf77923b0df4b15835e282f38e0118954"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=19/block=0001",
+      "targets": 1590,
+      "manifest_sha256": "9b4bb241991f5ae2361777818b2e9b9fffbd969a9f0fa73e886ecf612a05add6"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=20/block=0000",
+      "targets": 30973,
+      "manifest_sha256": "695688252a33e386fe21eae7c775692db1f24a15c13b1740773d9fd55692801d"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=20/block=0001",
+      "targets": 966,
+      "manifest_sha256": "b33dfcdef72094eb39e76ed4da7bdfd53bfcb2b93954b12b2042d07f2d7caf12"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=21/block=0000",
+      "targets": 30855,
+      "manifest_sha256": "fed26253d86cdab54536b5b64758b8a236686dd3b14ab6af5542ee8c15ece935"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=21/block=0001",
+      "targets": 951,
+      "manifest_sha256": "0725a1ace54df42c115d325f5d0fca62cb09ff5d533d9a8078e864123ee3dc8c"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=22/block=0000",
+      "targets": 30963,
+      "manifest_sha256": "ea34909717e11f8d8d2cd820eb75644a6662a86043630f2194e67fcf6f2db938"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=22/block=0001",
+      "targets": 1457,
+      "manifest_sha256": "e8b1a350fa168aae470bfbde6545d1d87c6deaa5e1e75fad34d7add495848dd1"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=23/block=0000",
+      "targets": 30926,
+      "manifest_sha256": "9bea53fe3440fe0bdcf0a149be9ea873864cc81069c0e616a4977772b253aec6"
+    },
+    {
+      "block": "transaction_date=2022-09-11/hour=23/block=0001",
+      "targets": 1488,
+      "manifest_sha256": "85cfcaaca7bc19a86b9ebb7a8439bbfc60006dd3e8cd465cdba430d7f456756f"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=00/block=0000",
+      "targets": 32483,
+      "manifest_sha256": "eb00a3b4ccb924a568f851e0b3208c82722384283f514d2e2a215d8258a9e53b"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=00/block=0001",
+      "targets": 32442,
+      "manifest_sha256": "b01185469284e5de7c7541f29a5ca3f3dc79c5aff4710f6d24d2997220e77ab8"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=00/block=0002",
+      "targets": 32453,
+      "manifest_sha256": "23e0497c053b8bf6d48ca8068c26dc1b8b05d5912c8941037a540739e0db45ce"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=00/block=0003",
+      "targets": 31881,
+      "manifest_sha256": "62713c4dc95c385c2a5a327e110d1879770ce585f17645221fc55e2f9b390976"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=00/block=0004",
+      "targets": 7537,
+      "manifest_sha256": "5703c349d6b2f1786032b56b2ccccf9b65f69bf78a6574353ceeabfb5d96809d"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=01/block=0000",
+      "targets": 31871,
+      "manifest_sha256": "14c6e9a2678c66ba08794440465f6a4888c024cc84b6ab54c0de0e2699f2b9f6"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=01/block=0001",
+      "targets": 31973,
+      "manifest_sha256": "b3020f2e9c98e6130abc93e4e9859421204761cfa19ce5d90e6116c8621eaf3d"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=01/block=0002",
+      "targets": 13495,
+      "manifest_sha256": "260f3d91cf467cc5455d8485395cb247eb41350d89ca2e227343588bfb98c483"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=02/block=0000",
+      "targets": 31929,
+      "manifest_sha256": "bb18bfa833b52a8ef3f0705d12c5c0ea244d24b7ee48728ad2e6f8fb1bf6f0d9"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=02/block=0001",
+      "targets": 31922,
+      "manifest_sha256": "9ac90fe0dfce2c1c9c9b1478d94ae5f522b5843a639a78975598fb4acbfbad04"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=02/block=0002",
+      "targets": 13696,
+      "manifest_sha256": "afe022e3a0d9351d58fc2e79a86f75b4b22456990773aa9ab1703c9454c31a4e"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=03/block=0000",
+      "targets": 31991,
+      "manifest_sha256": "d866572d844fac55a0b827a29fd0a247b34b5ac32927a77450f0131c995f1815"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=03/block=0001",
+      "targets": 32168,
+      "manifest_sha256": "7031df2d139362f7d1e372049cc7b3ffe86b792045fab9a36a04318ea23407d3"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=03/block=0002",
+      "targets": 13988,
+      "manifest_sha256": "5ece63bbe5a4bb662455e20278eaea49b7a22e0145d4bbd5f25906dffcdf7dac"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=04/block=0000",
+      "targets": 31929,
+      "manifest_sha256": "6d476a138facbf5148103f1664fe3607724de86b42817d56310fb166c7ec86ab"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=04/block=0001",
+      "targets": 32018,
+      "manifest_sha256": "d3c3adccb1173c52ed21f6e5f5c2f8488772e26a6b244cddf9d6765c7d773333"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=04/block=0002",
+      "targets": 14135,
+      "manifest_sha256": "b24f84d653909f815fefbb54bd6b495b317684eb79a147f236a0d408d73d38ca"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=05/block=0000",
+      "targets": 32049,
+      "manifest_sha256": "a1e79792e84c90256bb6b9186b5d9bc43afa4cea5972fc3afde0f4df439f5704"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=05/block=0001",
+      "targets": 31835,
+      "manifest_sha256": "6fc0d3db5537d1bafa8f003ed0aa182b000c08b5dff9d211e56f6670e131536a"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=05/block=0002",
+      "targets": 14187,
+      "manifest_sha256": "4ca072b5b1aaa64aec4973293916b04fa5a79a437181afaf49d1fe8627a34c91"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=06/block=0000",
+      "targets": 32009,
+      "manifest_sha256": "0968e05b1b436cb9d36d2ebe654b3682bb3e57944eb50d8987d84190b8cb8bc5"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=06/block=0001",
+      "targets": 31802,
+      "manifest_sha256": "923e8a67df67140cf5065a670a66052ed4b38b64b2f9303d6d458ee351c25e11"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=06/block=0002",
+      "targets": 13251,
+      "manifest_sha256": "33068d025324b877c9ab67d14819271d7e0ddf98837ba9c35b7224dbb6cb99a3"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=07/block=0000",
+      "targets": 31819,
+      "manifest_sha256": "a796f7a90c9b49979ae69d18a65d4397365a42e74c10b917c5fd43a5ab379d15"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=07/block=0001",
+      "targets": 31971,
+      "manifest_sha256": "d0beb6b604e6a53502e8f8aeb26894b2950a7614f2fdc707bb3a3e97bb6564fd"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=07/block=0002",
+      "targets": 14157,
+      "manifest_sha256": "c66d0de02dc7be43a6747fee4f53237bd917666107dc8e6d62a16901089bb6cd"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=08/block=0000",
+      "targets": 31968,
+      "manifest_sha256": "0bf56ca6c004500aa6767322394b1dc979c2776317965627a460974cc845753b"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=08/block=0001",
+      "targets": 32008,
+      "manifest_sha256": "c27d634ce4e3a217ca92fc4deba19d28ac4c6671cde064ec4e8306c90b42d1d3"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=08/block=0002",
+      "targets": 13543,
+      "manifest_sha256": "81a728cfb5293b2575d74f0d7652547a4f18cc8166bbb6c26350ed83cd17f2ea"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=09/block=0000",
+      "targets": 31901,
+      "manifest_sha256": "7653f134765f9e76e064a2c561fbe2a018c0d054ce0856fd37127883061c66ec"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=09/block=0001",
+      "targets": 31929,
+      "manifest_sha256": "29274be965b34520638fe9fbbacb6f2caa237fb298738a69513829d4a63be874"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=09/block=0002",
+      "targets": 14212,
+      "manifest_sha256": "b7d88970fe1fc97f8462b97db156b0e28597de1590e123d8a5231441d956c935"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=10/block=0000",
+      "targets": 32048,
+      "manifest_sha256": "36a0e002a742a36e672a356a406ab5fdf659b04602c1c93c397edafb8ede0b66"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=10/block=0001",
+      "targets": 32198,
+      "manifest_sha256": "6b15459c12382e7afa1ca529b0ce071b47b9f92b9f3ecaf6b4b15c897492606f"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=10/block=0002",
+      "targets": 13990,
+      "manifest_sha256": "1129c1dcf8d90786a3a856584dd96a2acbb83fc358f474c456166b98ba1032ae"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=11/block=0000",
+      "targets": 32008,
+      "manifest_sha256": "12113a1dada2ca00ff0c753aa8c10edcc01a3aed51177468bcde1ff1c4054c56"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=11/block=0001",
+      "targets": 32026,
+      "manifest_sha256": "5c5fa0ff3ce79a211aae87519aecf7ac3351bd0b7b733567424979bc6bc1a5a1"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=11/block=0002",
+      "targets": 14618,
+      "manifest_sha256": "1ef01f3664f10e4f1ba89a59549228b972078d2cac95e3d2e276e350a49c78d5"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=12/block=0000",
+      "targets": 32004,
+      "manifest_sha256": "4eb7396771ff34bcd5652345c53fdf21d97d0b217bb9c7e3436dbe762fbd65ec"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=12/block=0001",
+      "targets": 32054,
+      "manifest_sha256": "1dfc6cf82476416c23fbf3072dcb8e07c8345ed7a0681a37fddf48d26429d400"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=12/block=0002",
+      "targets": 14422,
+      "manifest_sha256": "c149ed870f89e9762dbf1f6b2a0cc2de3a49bac2410543939d75cbb4aabd6bb7"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=13/block=0000",
+      "targets": 32012,
+      "manifest_sha256": "7ee9da2a2d546891102c15f7ac19499d2748263183d5461a4c37625d48bd3ce9"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=13/block=0001",
+      "targets": 32031,
+      "manifest_sha256": "ef99a16e8ea21ba27ce6a212848fd846c0f50e0dfbdcb1374eb3e85369d69bac"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=13/block=0002",
+      "targets": 13160,
+      "manifest_sha256": "d6c784dc8c3f14fe43f66d378de69a4d4e858eefb63bf01463ee2235f684af47"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=14/block=0000",
+      "targets": 32005,
+      "manifest_sha256": "b14c25725fa6bc6c5ed99a76d2828665392a56dca8e3655a25639a889e172afd"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=14/block=0001",
+      "targets": 32051,
+      "manifest_sha256": "9afecf5bd9b937588c9ae9c470a5c6c374d316d75696360a4cd7188b520e1806"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=14/block=0002",
+      "targets": 14606,
+      "manifest_sha256": "4d74ef9430924157a11ce8f936fec264c55d31ace2a89d1692f7ab0056e56358"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=15/block=0000",
+      "targets": 31857,
+      "manifest_sha256": "51a1089f9cb2615b689c11199ded16506f76f837f70dc196699e3241cff91bf3"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=15/block=0001",
+      "targets": 31877,
+      "manifest_sha256": "470b4dd295990e7c07409c93bcf4cd16652c0ddc282d04d4605a46545cd6b363"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=15/block=0002",
+      "targets": 14334,
+      "manifest_sha256": "d98e0bee7cb0d0ebdb9dc62be018f88f5d79a32e8eca5b8472840b35d73a8871"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=16/block=0000",
+      "targets": 31896,
+      "manifest_sha256": "9a7ca86e27002f1172e612355cd0811a490110714eac85bad9c763e27b266e13"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=16/block=0001",
+      "targets": 31942,
+      "manifest_sha256": "27d04b1fa84128a1c7cee64ff9d3aebd82bfbda92d217693658353d17b2cbac4"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=16/block=0002",
+      "targets": 13418,
+      "manifest_sha256": "ff98a6afbb881879341070da150ab89ea3eb1c81905a843c98b1222ad8c0b445"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=17/block=0000",
+      "targets": 32124,
+      "manifest_sha256": "5512de4c64289e75fabc08249799400d38bc56855e806024b0ab92db6395ec3d"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=17/block=0001",
+      "targets": 31996,
+      "manifest_sha256": "243b21b18425b98ade0323005cae47c2993d1e342c3d516719f961024ec37aff"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=17/block=0002",
+      "targets": 13968,
+      "manifest_sha256": "41a78e8f1fbe180a5ae77b4b7192aaf530d7894db8948cd898e10fa13800d697"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=18/block=0000",
+      "targets": 31888,
+      "manifest_sha256": "4cfb1695a0c13f490d0517fe0fb5fc3ab103a78d0f4fd4fc23cfcf156f2d37e2"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=18/block=0001",
+      "targets": 31836,
+      "manifest_sha256": "e6a11b4569efdcb4bdd055b6d378505eca556b2e2b864fcf88dbfa1d682d84d1"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=18/block=0002",
+      "targets": 13705,
+      "manifest_sha256": "4b0ac448f12b086c0c5d02b41115c4694d8b423f9be3ed23b3d5b246bbda42c4"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=19/block=0000",
+      "targets": 31924,
+      "manifest_sha256": "faf1d7761c782553680f8f3c137655f73f1ef9cd9a0c9bb7d86a5a5cef3d7820"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=19/block=0001",
+      "targets": 31958,
+      "manifest_sha256": "29be2631ceb9bf19be1fd33d1816b823435688f4749978b385c299c33fe30c0c"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=19/block=0002",
+      "targets": 14101,
+      "manifest_sha256": "885cf758aa28d2a8c11142ff7e3b305be036a21eae0c334cd6cbe7f7272e72ba"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=20/block=0000",
+      "targets": 31910,
+      "manifest_sha256": "453130d40b3a6492ea5a8c86538f01a7414f2cb938f2dc5c2a0751d16f4332f0"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=20/block=0001",
+      "targets": 32086,
+      "manifest_sha256": "464d9a53410567198ae732063292e4875a471df787ebb05383217140d49e9afa"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=20/block=0002",
+      "targets": 15018,
+      "manifest_sha256": "e9c470e4ce57c8cd3c1769643d34aebcfdee5ac9de0f34cb32953362c924749d"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=21/block=0000",
+      "targets": 31896,
+      "manifest_sha256": "8fa5df89f7d082549128f37ebce4e0006c06f3c70a8059f7738e4b5065207709"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=21/block=0001",
+      "targets": 31964,
+      "manifest_sha256": "0d41c91d91c17e4790e0cf86553d25ed2833609952dadefa9f9e69e3321d502e"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=21/block=0002",
+      "targets": 14622,
+      "manifest_sha256": "fee6e591012381864c39942985262778bcd95f45ed7602ef00aca3475778a88d"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=22/block=0000",
+      "targets": 31978,
+      "manifest_sha256": "706c8b914495d69dceabf2c41144f54695272a2d3d92c1c683d6c636c2f597e1"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=22/block=0001",
+      "targets": 32106,
+      "manifest_sha256": "c1b346320134afd03014344fd7c3415184425569ecdd8c37f388d8bc3f06e8ed"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=22/block=0002",
+      "targets": 14365,
+      "manifest_sha256": "b5d4868dcc6067590c4e3831828aedf9291e6287a1cf3deac3469388bcefa410"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=23/block=0000",
+      "targets": 32044,
+      "manifest_sha256": "bae366df18da8020039c7ccfd5d0ed8e52bd484200c0b5517e7948d3fec7aea9"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=23/block=0001",
+      "targets": 31897,
+      "manifest_sha256": "da1d5b784cc9e5186f06931cf58c3f22b365daa7372fe55031a9b31693e10d6e"
+    },
+    {
+      "block": "transaction_date=2022-09-12/hour=23/block=0002",
+      "targets": 13745,
+      "manifest_sha256": "1507e74312663341c1e5ad21c9fe46d28aad2a05ee8f14120165bf44ad2dd2e1"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=00/block=0000",
+      "targets": 32414,
+      "manifest_sha256": "53dc5b30bd1c60784df0132fa6f33b15b81c880289938060664407a12d2c1fec"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=00/block=0001",
+      "targets": 32444,
+      "manifest_sha256": "c1b530863452041ac8c2734e8c2f2d9468255de6db32d1188a2f25c6611bfb4f"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=00/block=0002",
+      "targets": 32493,
+      "manifest_sha256": "c990cd69a64658f92eb0a8418ad706d8a247e4a8d2787ed35f287af59bf1db53"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=00/block=0003",
+      "targets": 32092,
+      "manifest_sha256": "994de6945b4b5a226c63d8b6824c74579941cd53129345a8d9ebc65854522644"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=00/block=0004",
+      "targets": 7248,
+      "manifest_sha256": "71629ca6698155b7fab4500402363856c270b7acfe066d5717fb35d084de8fd6"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=01/block=0000",
+      "targets": 32082,
+      "manifest_sha256": "d138d5181a39f9022a7da9cc71d23d4dfdee3a76061a65e490d8bd37cffc1472"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=01/block=0001",
+      "targets": 31982,
+      "manifest_sha256": "efd09462d5944019162e73b4e5f618c92767fbb9d1950804e128ae7dbde2900a"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=01/block=0002",
+      "targets": 13151,
+      "manifest_sha256": "512b8daf5da95097d3bdf98a3a5f93f7f6f445f7acda0a75fc1230bb1ad14253"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=02/block=0000",
+      "targets": 32008,
+      "manifest_sha256": "537b822c2f0d3dd501c37caad21d021607927391705c22028b4ffa48b31f4ee3"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=02/block=0001",
+      "targets": 31944,
+      "manifest_sha256": "24089b0f0dcda5dcf6071454775c82c2b7ce0987280a2286e322556e344e756b"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=02/block=0002",
+      "targets": 13479,
+      "manifest_sha256": "6ff808e11c6e9d6426f96a8f497f4b936abfbe643ee925fb603727785d98059e"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=03/block=0000",
+      "targets": 32159,
+      "manifest_sha256": "56e3f8893527c8ab864304858fa4db32eba539fa184521192b263fe3a6990b89"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=03/block=0001",
+      "targets": 31983,
+      "manifest_sha256": "dd3a2537778c403d44afe749a55a9c19f350b0ee061b0181a76b147ad0faeac1"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=03/block=0002",
+      "targets": 14054,
+      "manifest_sha256": "a1cf4521ec4e999504aabdab568e7942da222bbe45ea47afd10e94136242e9ab"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=04/block=0000",
+      "targets": 32036,
+      "manifest_sha256": "1452c5602932bf4fa01d6cd405a8b3d81bfa23bdece90ccf6eabc221584df05d"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=04/block=0001",
+      "targets": 32016,
+      "manifest_sha256": "5731f6e1ee7a798dd60ad05d56a8ed90a745475b86cfb45368577453d3ec6658"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=04/block=0002",
+      "targets": 13809,
+      "manifest_sha256": "8dabf21ba89b2760a4dbc50ce0966a8c15a8b2ccc94426d857fd3d552e19547a"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=05/block=0000",
+      "targets": 31968,
+      "manifest_sha256": "5c8982e5b15cafd0f91538339825f79fe59cf1ca274247926c8edc7167b9d07a"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=05/block=0001",
+      "targets": 31928,
+      "manifest_sha256": "758bce5acc442d488493155f313b82b83337c03d2f210fdd6422b809f0f4e4ce"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=05/block=0002",
+      "targets": 14543,
+      "manifest_sha256": "bdf6497f25743feb750366285d778e60d791ca990a0715e7d62136c627cb3d4f"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=06/block=0000",
+      "targets": 31986,
+      "manifest_sha256": "d3986c32b01ce48877a70267bf5f12a79bdcfb4eabedfddbc98e56858bbbb4b7"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=06/block=0001",
+      "targets": 31928,
+      "manifest_sha256": "2349828ab202161a720834a15b0967d7808f063a3c83ba07bf906afa8f82e8df"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=06/block=0002",
+      "targets": 13619,
+      "manifest_sha256": "a24e72d8826f3d209358a82a44b17a62e7afddbc3d1f985cba2eb6955c82eebb"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=07/block=0000",
+      "targets": 31862,
+      "manifest_sha256": "654ea24be12f9bf53affef2f7f5740a8114d5113ed6b955ab52b8bbf2890e69f"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=07/block=0001",
+      "targets": 32087,
+      "manifest_sha256": "cd334b8c5a84cd59bba5bb89e08244a268d2a86ca1bcfdace4a0e99b5751d0df"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=07/block=0002",
+      "targets": 13533,
+      "manifest_sha256": "550dc531a6c8b19e8fa06a1846afd1710d14c8015d4ef327fdf2326227105fb4"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=08/block=0000",
+      "targets": 31979,
+      "manifest_sha256": "516ea9d7709821c347c9e1d9e1bd72ad2ede59a7c852746d5b7b7b385515c1f7"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=08/block=0001",
+      "targets": 32011,
+      "manifest_sha256": "dd6da5a4383965593920d071f9e9eb52d4d8d1bc90e31c43073748f13cef3ce8"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=08/block=0002",
+      "targets": 13546,
+      "manifest_sha256": "443001375663c01b068c203073eb19a92cc960b07f45d8ffbcdaa87a841a5902"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=09/block=0000",
+      "targets": 32043,
+      "manifest_sha256": "868d1b2787ff4f335f64afbc772d425ec90d6eee3e729893ab340a6f33b1c419"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=09/block=0001",
+      "targets": 31943,
+      "manifest_sha256": "ece764f8cdddb3336f755d86cdf2345abc6c7611f31ea482fb6ac83de746c2ae"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=09/block=0002",
+      "targets": 13580,
+      "manifest_sha256": "9bc409ec98215cee5a053734622679bb5956f698468504b4b994018673b2d5ad"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=10/block=0000",
+      "targets": 32067,
+      "manifest_sha256": "2e9e7e1e113616d0b5b84e7f75ae45110b6a7e93db7c948ce7ffd193bd0f944b"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=10/block=0001",
+      "targets": 31824,
+      "manifest_sha256": "23a46c0aa5a24a78f48b51e911dafcd61f4b7e9d20c45780df758cd44dd48882"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=10/block=0002",
+      "targets": 13967,
+      "manifest_sha256": "4801dd6d238aad46dd13152041a2d03d037f075ef2770deebb345798e143325b"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=11/block=0000",
+      "targets": 32128,
+      "manifest_sha256": "2a355e2daf2d2201b81199220005fb6d5d7c2252d6bff1f283bf2ebb185f49fd"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=11/block=0001",
+      "targets": 31981,
+      "manifest_sha256": "9c0ce8789835ed04522fd8a7ee09773a7e650e420b72e87e7609345c43581702"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=11/block=0002",
+      "targets": 14229,
+      "manifest_sha256": "de273858d0feea18068b8f99adec9343d457eedb2a3fea0d29c19fae28a354bc"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=12/block=0000",
+      "targets": 32088,
+      "manifest_sha256": "e77e55afe7680444e9a56acb19530db786ce77f943ae5bc7b38b2ec35530d9c1"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=12/block=0001",
+      "targets": 31901,
+      "manifest_sha256": "4d5d8455a4ebf103185eb47e3a83dabbef3fa1cd288c913bbffe1bdd90b6f997"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=12/block=0002",
+      "targets": 13896,
+      "manifest_sha256": "a90209998664f59eb76c812921819b231414ecc39230b1adeb04ac451bc051ac"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=13/block=0000",
+      "targets": 32062,
+      "manifest_sha256": "9c8a41affc53fa9a766f6d582b078080b30d8107472c60ec7ffd8bbcc5b16448"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=13/block=0001",
+      "targets": 32032,
+      "manifest_sha256": "fea7591aff2c3aeeec7f5a771856ba3380a02c4327c8be7936dec173fba82cd6"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=13/block=0002",
+      "targets": 13409,
+      "manifest_sha256": "e94e42efa657ba353cce9ccef2db78d5fdbbd1780b37a4c7e4ae4973dbf2c429"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=14/block=0000",
+      "targets": 32050,
+      "manifest_sha256": "c6a11b57ddbd6eaa84a4dfaf6e3737d1d44837ec92b38927b7ab7ea6c7d964a4"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=14/block=0001",
+      "targets": 32064,
+      "manifest_sha256": "5221d9721d514e66bf873e180e4ed5fdc0c7f4f587893354d0f9a39e6e13f8f1"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=14/block=0002",
+      "targets": 14627,
+      "manifest_sha256": "f35807ca168a454c290cc16110a7a9d6c00b6e99a9133f9770b8a04110234b98"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=15/block=0000",
+      "targets": 32102,
+      "manifest_sha256": "0ea4ec6a3c7a798a69c2977637fa38fae6ea6c088dba9adf1908bdd6735e1f2b"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=15/block=0001",
+      "targets": 31846,
+      "manifest_sha256": "1fdc2a981e56fcf46261da69e707ac68620dd6e09239b7e58fa2b5b55b99dfb4"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=15/block=0002",
+      "targets": 13829,
+      "manifest_sha256": "f4823a894f535cfee54c100f09242c530be71adc6f937416a59edd7f50b4fcfb"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=16/block=0000",
+      "targets": 32019,
+      "manifest_sha256": "d325650420b9d00ff5d9ed253d12ad2c3bb3629b415664b750f63ce3260f984d"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=16/block=0001",
+      "targets": 31974,
+      "manifest_sha256": "b01bd8301fef14bcbfe244fc4a9f109c5c7a635f2a36d5bde1a59c7b977c755b"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=16/block=0002",
+      "targets": 13591,
+      "manifest_sha256": "e083ecfb9f9cf13a19ba5be153e993304f5c63a1d745c5f6dd9212d962278555"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=17/block=0000",
+      "targets": 31907,
+      "manifest_sha256": "3a09df68f29a8bd749ff4b7030ace90b97e043bdd3e0cb180892bf2e4b322e95"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=17/block=0001",
+      "targets": 32075,
+      "manifest_sha256": "b0484e2e1c5d8559087495f1bfac1504d484c1d8b0fb32ec0ad9297cdd6cf600"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=17/block=0002",
+      "targets": 14882,
+      "manifest_sha256": "23c697c0cda5c927a694d0d25f37a752c3041cfe5901bba0608d4c41b3ce4f24"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=18/block=0000",
+      "targets": 32050,
+      "manifest_sha256": "93b880ef025a6d39ac491f67f1e932d90487e0c3e323a51db7fcd356214e68e3"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=18/block=0001",
+      "targets": 31974,
+      "manifest_sha256": "500e7025d14260a8b762815bda0e63c0da7d3bd05bfe8619ab4e94f7def1e1ec"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=18/block=0002",
+      "targets": 13825,
+      "manifest_sha256": "e73796fdccc7c5bfc7089e046db509a1f52d076c63c18637a13d54d058c1e013"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=19/block=0000",
+      "targets": 31952,
+      "manifest_sha256": "7680003e3ce83aacceff6f99b2c599fd87e2f3e64345fe892d34e098d26dcbf4"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=19/block=0001",
+      "targets": 32031,
+      "manifest_sha256": "03126bd806a2843fc514e3bdcf7b86d62d9e88b1fe4ff3a5bf5dbe52528af742"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=19/block=0002",
+      "targets": 14326,
+      "manifest_sha256": "2744ef1cbf327d827f3785bc2ea071c99a08baad260110412f42742975e7071e"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=20/block=0000",
+      "targets": 31972,
+      "manifest_sha256": "37ecdfaf769f5092fb67bc46b6369570d2ef685aab1847c497f28de6c735ac59"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=20/block=0001",
+      "targets": 31875,
+      "manifest_sha256": "97df468c68647bae04b1bfde0b33c9ce22f5e662ffbec496b1b68c76bb6463a8"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=20/block=0002",
+      "targets": 13759,
+      "manifest_sha256": "ceef9de2a62b30eae6131730ef479e4c194b5402abe09f6fb9537f806ef9ffcb"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=21/block=0000",
+      "targets": 32038,
+      "manifest_sha256": "8c5dd18e9d345eeda0477ae6559f019dcde86c5e7058591392e3b4afb158eeae"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=21/block=0001",
+      "targets": 32045,
+      "manifest_sha256": "b90d04b12dc806ff94dd4d2fc6b85bca42416ccf851d16b521e9e0ad1a3df787"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=21/block=0002",
+      "targets": 13997,
+      "manifest_sha256": "0df1cd5f205968637a2525b9b87f93038e14f39a6864e9a13a05fea923eb4b9a"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=22/block=0000",
+      "targets": 32132,
+      "manifest_sha256": "7d14a19a9589b9e26dc562523d8dc067228b63fbec66f6c12432aad6457849f6"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=22/block=0001",
+      "targets": 31996,
+      "manifest_sha256": "3367aa5da1276d4faa96056c3c50c422c0f9e094606816914a4780de1e03ada8"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=22/block=0002",
+      "targets": 14735,
+      "manifest_sha256": "59142abdfe251441aa96e46c2d3ee36033b012b86778a44f9e431f9eec823918"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=23/block=0000",
+      "targets": 31991,
+      "manifest_sha256": "4a0aacce7df76406168f87f9e5b9d7263b11e79ab70f8ccbc7c17cb7883eb235"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=23/block=0001",
+      "targets": 32144,
+      "manifest_sha256": "40616f9c24b1f2ee1facd521020c7838d784beb4532cfb0aad943f9d78bed836"
+    },
+    {
+      "block": "transaction_date=2022-09-13/hour=23/block=0002",
+      "targets": 13282,
+      "manifest_sha256": "b6d1db7a21794136b8082b0e6951d21265cd9e266d1d0c893ec9b7cc7699bf78"
+    }
+  ],
+  "completed_at": "2026-10-09T16:34:42.336630+00:00",
+  "scope": "Full natural-prevalence Validation 2022-09-11..13; developer analysis and selection; Test not evaluated"
+}

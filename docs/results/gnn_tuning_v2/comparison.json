@@ -1,0 +1,5902 @@
+{
+  "status": "completed",
+  "version": 2,
+  "results": [
+    {
+      "name": "lr_only",
+      "model_path": "result\\gnn_tuning_v1\\trials\\lr_only\\final_model.pt",
+      "model_sha256": "b8c18e99903dd28f84c8a5d45ded34314f7b7b5a2cd5e25c23495ec5ade57d3a",
+      "training_config_sha256": "e641ee00071608c9a7c6b0d64df82720d8cb43a520a1a619ff4d1d3952344fe1",
+      "training_result_sha256": "6503d32a418820c825275cef0e9b1ff60ec80efe3619cbfc5b68dc5e401060ad",
+      "evaluation_config_sha256": "b3182cd2800daddca1e60ac25811a2e2fd170112f9efbb71765905aa58cede89",
+      "metrics_sha256": "74430bb4b70f52aa7b591771ea878b87ff5a2bb2bee0cbc1c0b010c54b6bbdb5",
+      "metrics": {
+        "samples": 4689006,
+        "positives": 6420,
+        "negatives": 4682586,
+        "positive_rate": 0.0013691601162378552,
+        "average_precision": 0.6138136825500947,
+        "pr_auc_definition": "average_precision (step integral)",
+        "roc_auc": 0.9828319713259914,
+        "threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.23674109315024058,
+          "recall": 0.6820872274143303,
+          "f1": 0.3514869366296103,
+          "fpr": 0.003015000685518643,
+          "tp": 4379,
+          "fp": 14118,
+          "tn": 4668468,
+          "fn": 2041
+        },
+        "best_f1": {
+          "threshold": 0.9529672861099243,
+          "precision": 0.8127167630057803,
+          "recall": 0.5475077881619937,
+          "f1": 0.654257794322941,
+          "fpr": 0.0001729813397981372,
+          "tp": 3515,
+          "fp": 810,
+          "tn": 4681776,
+          "fn": 2905
+        },
+        "recall_at_fpr": {
+          "0.001": {
+            "threshold": 0.7263643741607666,
+            "precision": 0.4625129563514914,
+            "recall": 0.6255451713395639,
+            "f1": 0.5318148712176389,
+            "fpr": 0.0009966714973307484,
+            "tp": 4016,
+            "fp": 4667,
+            "tn": 4677919,
+            "fn": 2404
+          },
+          "0.01": {
+            "threshold": 0.1214541643857956,
+            "precision": 0.0968675814949916,
+            "recall": 0.7817757009345795,
+            "f1": 0.1723764875586008,
+            "fpr": 0.009993196067301273,
+            "tp": 5019,
+            "fp": 46794,
+            "tn": 4635792,
+            "fn": 1401
+          }
+        }
+      },
+      "precision80": {
+        "threshold": 0.945133626461029,
+        "samples": 4689006,
+        "positives": 6420,
+        "negatives": 4682586,
+        "alerts": 4413,
+        "tp": 3533,
+        "fp": 880,
+        "fn": 2887,
+        "tn": 4681706,
+        "precision": 0.8005891683661908,
+        "recall": 0.5503115264797508,
+        "fpr": 0.00018793034447205027,
+        "f1": 0.6522662235761101
+      },
+      "non_ach_precision80": {
+        "threshold": 0.945133626461029,
+        "samples": 4104569,
+        "positives": 715,
+        "negatives": 4103854,
+        "alerts": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 715,
+        "tn": 4103854,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "f1": 0.0
+      },
+      "qualification": {
+        "passed": false,
+        "precision": true,
+        "overall_recall": true,
+        "non_ach_recall": false
+      },
+      "groups": {
+        "payment_format": {
+          "ACH": {
+            "samples": 584437,
+            "positives": 5705,
+            "payer_accounts": 255079,
+            "receiver_accounts": 199520,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 584437,
+              "positives": 5705,
+              "negatives": 578732,
+              "alerts": 4413,
+              "tp": 3533,
+              "fp": 880,
+              "fn": 2172,
+              "tn": 577852,
+              "precision": 0.8005891683661908,
+              "recall": 0.6192813321647678,
+              "fpr": 0.001520565650421957,
+              "f1": 0.6983593595572247
+            },
+            "detected_positive_accounts": {
+              "transactions": 3533,
+              "payer_accounts": 2552,
+              "receiver_accounts": 2471,
+              "either_accounts": 4453
+            },
+            "false_positive_accounts": {
+              "transactions": 880,
+              "payer_accounts": 867,
+              "receiver_accounts": 834,
+              "either_accounts": 1682
+            }
+          },
+          "Bitcoin": {
+            "samples": 103938,
+            "positives": 44,
+            "payer_accounts": 14313,
+            "receiver_accounts": 17921,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 103938,
+              "positives": 44,
+              "negatives": 103894,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 44,
+              "tn": 103894,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Cash": {
+            "samples": 495358,
+            "positives": 94,
+            "payer_accounts": 139617,
+            "receiver_accounts": 198372,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 495358,
+              "positives": 94,
+              "negatives": 495264,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 94,
+              "tn": 495264,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Cheque": {
+            "samples": 1920524,
+            "positives": 363,
+            "payer_accounts": 398993,
+            "receiver_accounts": 673836,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 1920524,
+              "positives": 363,
+              "negatives": 1920161,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 363,
+              "tn": 1920161,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Credit Card": {
+            "samples": 1409826,
+            "positives": 214,
+            "payer_accounts": 337402,
+            "receiver_accounts": 521299,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 1409826,
+              "positives": 214,
+              "negatives": 1409612,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 214,
+              "tn": 1409612,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Wire": {
+            "samples": 174923,
+            "positives": 0,
+            "payer_accounts": 67202,
+            "receiver_accounts": 72171,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 174923,
+              "positives": 0,
+              "negatives": 174923,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 174923,
+              "precision": null,
+              "recall": null,
+              "fpr": 0.0,
+              "f1": null
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          }
+        },
+        "ach_group": {
+          "ACH": {
+            "samples": 584437,
+            "positives": 5705,
+            "payer_accounts": 255079,
+            "receiver_accounts": 199520,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 584437,
+              "positives": 5705,
+              "negatives": 578732,
+              "alerts": 4413,
+              "tp": 3533,
+              "fp": 880,
+              "fn": 2172,
+              "tn": 577852,
+              "precision": 0.8005891683661908,
+              "recall": 0.6192813321647678,
+              "fpr": 0.001520565650421957,
+              "f1": 0.6983593595572247
+            },
+            "detected_positive_accounts": {
+              "transactions": 3533,
+              "payer_accounts": 2552,
+              "receiver_accounts": 2471,
+              "either_accounts": 4453
+            },
+            "false_positive_accounts": {
+              "transactions": 880,
+              "payer_accounts": 867,
+              "receiver_accounts": 834,
+              "either_accounts": 1682
+            }
+          },
+          "non_ACH": {
+            "samples": 4104569,
+            "positives": 715,
+            "payer_accounts": 448281,
+            "receiver_accounts": 733502,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 4104569,
+              "positives": 715,
+              "negatives": 4103854,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 715,
+              "tn": 4103854,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          }
+        },
+        "payer_bank70": {
+          "bank70": {
+            "samples": 29,
+            "positives": 1,
+            "payer_accounts": 11,
+            "receiver_accounts": 13,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 29,
+              "positives": 1,
+              "negatives": 28,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "tn": 28,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "other": {
+            "samples": 4688977,
+            "positives": 6419,
+            "payer_accounts": 549649,
+            "receiver_accounts": 759185,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 4688977,
+              "positives": 6419,
+              "negatives": 4682558,
+              "alerts": 4413,
+              "tp": 3533,
+              "fp": 880,
+              "fn": 2886,
+              "tn": 4681678,
+              "precision": 0.8005891683661908,
+              "recall": 0.5503972581398971,
+              "fpr": 0.00018793146822740903,
+              "f1": 0.6523264401772526
+            },
+            "detected_positive_accounts": {
+              "transactions": 3533,
+              "payer_accounts": 2552,
+              "receiver_accounts": 2471,
+              "either_accounts": 4453
+            },
+            "false_positive_accounts": {
+              "transactions": 880,
+              "payer_accounts": 867,
+              "receiver_accounts": 834,
+              "either_accounts": 1682
+            }
+          }
+        },
+        "receiver_bank70": {
+          "bank70": {
+            "samples": 175,
+            "positives": 0,
+            "payer_accounts": 40,
+            "receiver_accounts": 27,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 175,
+              "positives": 0,
+              "negatives": 175,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 175,
+              "precision": null,
+              "recall": null,
+              "fpr": 0.0,
+              "f1": null
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "other": {
+            "samples": 4688831,
+            "positives": 6420,
+            "payer_accounts": 549649,
+            "receiver_accounts": 759161,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 4688831,
+              "positives": 6420,
+              "negatives": 4682411,
+              "alerts": 4413,
+              "tp": 3533,
+              "fp": 880,
+              "fn": 2887,
+              "tn": 4681531,
+              "precision": 0.8005891683661908,
+              "recall": 0.5503115264797508,
+              "fpr": 0.00018793736816353796,
+              "f1": 0.6522662235761101
+            },
+            "detected_positive_accounts": {
+              "transactions": 3533,
+              "payer_accounts": 2552,
+              "receiver_accounts": 2471,
+              "either_accounts": 4453
+            },
+            "false_positive_accounts": {
+              "transactions": 880,
+              "payer_accounts": 867,
+              "receiver_accounts": 834,
+              "either_accounts": 1682
+            }
+          }
+        },
+        "date": {
+          "2022-09-11": {
+            "samples": 830142,
+            "positives": 1966,
+            "payer_accounts": 303725,
+            "receiver_accounts": 382675,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 830142,
+              "positives": 1966,
+              "negatives": 828176,
+              "alerts": 1450,
+              "tp": 1148,
+              "fp": 302,
+              "fn": 818,
+              "tn": 827874,
+              "precision": 0.7917241379310345,
+              "recall": 0.5839267548321465,
+              "fpr": 0.0003646567879291358,
+              "f1": 0.6721311475409836
+            },
+            "detected_positive_accounts": {
+              "transactions": 1148,
+              "payer_accounts": 937,
+              "receiver_accounts": 926,
+              "either_accounts": 1730
+            },
+            "false_positive_accounts": {
+              "transactions": 302,
+              "payer_accounts": 301,
+              "receiver_accounts": 290,
+              "either_accounts": 587
+            }
+          },
+          "2022-09-12": {
+            "samples": 1930240,
+            "positives": 2179,
+            "payer_accounts": 482269,
+            "receiver_accounts": 727806,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 1930240,
+              "positives": 2179,
+              "negatives": 1928061,
+              "alerts": 1435,
+              "tp": 1153,
+              "fp": 282,
+              "fn": 1026,
+              "tn": 1927779,
+              "precision": 0.8034843205574913,
+              "recall": 0.5291418081688848,
+              "fpr": 0.0001462609326157212,
+              "f1": 0.6380741560597676
+            },
+            "detected_positive_accounts": {
+              "transactions": 1153,
+              "payer_accounts": 942,
+              "receiver_accounts": 940,
+              "either_accounts": 1749
+            },
+            "false_positive_accounts": {
+              "transactions": 282,
+              "payer_accounts": 279,
+              "receiver_accounts": 275,
+              "either_accounts": 553
+            }
+          },
+          "2022-09-13": {
+            "samples": 1928624,
+            "positives": 2275,
+            "payer_accounts": 480917,
+            "receiver_accounts": 727995,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 1928624,
+              "positives": 2275,
+              "negatives": 1926349,
+              "alerts": 1528,
+              "tp": 1232,
+              "fp": 296,
+              "fn": 1043,
+              "tn": 1926053,
+              "precision": 0.806282722513089,
+              "recall": 0.5415384615384615,
+              "fpr": 0.00015365855304516472,
+              "f1": 0.6479095450959769
+            },
+            "detected_positive_accounts": {
+              "transactions": 1232,
+              "payer_accounts": 1008,
+              "receiver_accounts": 990,
+              "either_accounts": 1863
+            },
+            "false_positive_accounts": {
+              "transactions": 296,
+              "payer_accounts": 294,
+              "receiver_accounts": 285,
+              "either_accounts": 576
+            }
+          }
+        },
+        "payer_support_24h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 3,
+              "fp": 1,
+              "fn": 10,
+              "tn": 92023,
+              "precision": 0.75,
+              "recall": 0.23076923076923078,
+              "fpr": 1.0866730418151786e-05,
+              "f1": 0.35294117647058826
+            },
+            "detected_positive_accounts": {
+              "transactions": 3,
+              "payer_accounts": 3,
+              "receiver_accounts": 3,
+              "either_accounts": 3
+            },
+            "false_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            }
+          },
+          "0": {
+            "samples": 660566,
+            "positives": 4144,
+            "payer_accounts": 476244,
+            "receiver_accounts": 377230,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 660566,
+              "positives": 4144,
+              "negatives": 656422,
+              "alerts": 2890,
+              "tp": 2409,
+              "fp": 481,
+              "fn": 1735,
+              "tn": 655941,
+              "precision": 0.8335640138408305,
+              "recall": 0.5813223938223938,
+              "fpr": 0.0007327603279597576,
+              "f1": 0.6849587716804094
+            },
+            "detected_positive_accounts": {
+              "transactions": 2409,
+              "payer_accounts": 2165,
+              "receiver_accounts": 1799,
+              "either_accounts": 3608
+            },
+            "false_positive_accounts": {
+              "transactions": 481,
+              "payer_accounts": 480,
+              "receiver_accounts": 459,
+              "either_accounts": 935
+            }
+          },
+          "1-4": {
+            "samples": 1996033,
+            "positives": 1196,
+            "payer_accounts": 434294,
+            "receiver_accounts": 577349,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 1996033,
+              "positives": 1196,
+              "negatives": 1994837,
+              "alerts": 1086,
+              "tp": 807,
+              "fp": 279,
+              "fn": 389,
+              "tn": 1994558,
+              "precision": 0.7430939226519337,
+              "recall": 0.6747491638795987,
+              "fpr": 0.00013986105130394112,
+              "f1": 0.7072743207712533
+            },
+            "detected_positive_accounts": {
+              "transactions": 807,
+              "payer_accounts": 452,
+              "receiver_accounts": 655,
+              "either_accounts": 1008
+            },
+            "false_positive_accounts": {
+              "transactions": 279,
+              "payer_accounts": 271,
+              "receiver_accounts": 267,
+              "either_accounts": 531
+            }
+          },
+          ">=5": {
+            "samples": 1940370,
+            "positives": 1067,
+            "payer_accounts": 176781,
+            "receiver_accounts": 481146,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 1940370,
+              "positives": 1067,
+              "negatives": 1939303,
+              "alerts": 433,
+              "tp": 314,
+              "fp": 119,
+              "fn": 753,
+              "tn": 1939184,
+              "precision": 0.7251732101616628,
+              "recall": 0.2942830365510778,
+              "fpr": 6.136225231436242e-05,
+              "f1": 0.4186666666666667
+            },
+            "detected_positive_accounts": {
+              "transactions": 314,
+              "payer_accounts": 203,
+              "receiver_accounts": 242,
+              "either_accounts": 420
+            },
+            "false_positive_accounts": {
+              "transactions": 119,
+              "payer_accounts": 118,
+              "receiver_accounts": 119,
+              "either_accounts": 237
+            }
+          }
+        },
+        "payer_support_72h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 3,
+              "fp": 1,
+              "fn": 10,
+              "tn": 92023,
+              "precision": 0.75,
+              "recall": 0.23076923076923078,
+              "fpr": 1.0866730418151786e-05,
+              "f1": 0.35294117647058826
+            },
+            "detected_positive_accounts": {
+              "transactions": 3,
+              "payer_accounts": 3,
+              "receiver_accounts": 3,
+              "either_accounts": 3
+            },
+            "false_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            }
+          },
+          "0": {
+            "samples": 173134,
+            "positives": 3488,
+            "payer_accounts": 169559,
+            "receiver_accounts": 96232,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 173134,
+              "positives": 3488,
+              "negatives": 169646,
+              "alerts": 2436,
+              "tp": 2087,
+              "fp": 349,
+              "fn": 1401,
+              "tn": 169297,
+              "precision": 0.8567323481116584,
+              "recall": 0.5983371559633027,
+              "fpr": 0.0020572250450939015,
+              "f1": 0.7045914922349764
+            },
+            "detected_positive_accounts": {
+              "transactions": 2087,
+              "payer_accounts": 1969,
+              "receiver_accounts": 1535,
+              "either_accounts": 3223
+            },
+            "false_positive_accounts": {
+              "transactions": 349,
+              "payer_accounts": 349,
+              "receiver_accounts": 332,
+              "either_accounts": 677
+            }
+          },
+          "1-4": {
+            "samples": 855574,
+            "positives": 1185,
+            "payer_accounts": 299206,
+            "receiver_accounts": 323821,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 855574,
+              "positives": 1185,
+              "negatives": 854389,
+              "alerts": 909,
+              "tp": 705,
+              "fp": 204,
+              "fn": 480,
+              "tn": 854185,
+              "precision": 0.7755775577557755,
+              "recall": 0.5949367088607594,
+              "fpr": 0.00023876711895869446,
+              "f1": 0.673352435530086
+            },
+            "detected_positive_accounts": {
+              "transactions": 705,
+              "payer_accounts": 372,
+              "receiver_accounts": 642,
+              "either_accounts": 965
+            },
+            "false_positive_accounts": {
+              "transactions": 204,
+              "payer_accounts": 201,
+              "receiver_accounts": 194,
+              "either_accounts": 395
+            }
+          },
+          ">=5": {
+            "samples": 3568261,
+            "positives": 1734,
+            "payer_accounts": 299457,
+            "receiver_accounts": 641369,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 3568261,
+              "positives": 1734,
+              "negatives": 3566527,
+              "alerts": 1064,
+              "tp": 738,
+              "fp": 326,
+              "fn": 996,
+              "tn": 3566201,
+              "precision": 0.693609022556391,
+              "recall": 0.42560553633217996,
+              "fpr": 9.140544849373073e-05,
+              "f1": 0.5275196568977841
+            },
+            "detected_positive_accounts": {
+              "transactions": 738,
+              "payer_accounts": 426,
+              "receiver_accounts": 496,
+              "either_accounts": 837
+            },
+            "false_positive_accounts": {
+              "transactions": 326,
+              "payer_accounts": 320,
+              "receiver_accounts": 319,
+              "either_accounts": 634
+            }
+          }
+        },
+        "payer_support_7d": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 3,
+              "fp": 1,
+              "fn": 10,
+              "tn": 92023,
+              "precision": 0.75,
+              "recall": 0.23076923076923078,
+              "fpr": 1.0866730418151786e-05,
+              "f1": 0.35294117647058826
+            },
+            "detected_positive_accounts": {
+              "transactions": 3,
+              "payer_accounts": 3,
+              "receiver_accounts": 3,
+              "either_accounts": 3
+            },
+            "false_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            }
+          },
+          "0": {
+            "samples": 81908,
+            "positives": 3121,
+            "payer_accounts": 81355,
+            "receiver_accounts": 24247,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 81908,
+              "positives": 3121,
+              "negatives": 78787,
+              "alerts": 2278,
+              "tp": 1993,
+              "fp": 285,
+              "fn": 1128,
+              "tn": 78502,
+              "precision": 0.8748902546093064,
+              "recall": 0.6385773790451779,
+              "fpr": 0.0036173480396512114,
+              "f1": 0.7382848675680682
+            },
+            "detected_positive_accounts": {
+              "transactions": 1993,
+              "payer_accounts": 1888,
+              "receiver_accounts": 1474,
+              "either_accounts": 3098
+            },
+            "false_positive_accounts": {
+              "transactions": 285,
+              "payer_accounts": 285,
+              "receiver_accounts": 268,
+              "either_accounts": 550
+            }
+          },
+          "1-4": {
+            "samples": 52091,
+            "positives": 1062,
+            "payer_accounts": 44591,
+            "receiver_accounts": 22950,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 52091,
+              "positives": 1062,
+              "negatives": 51029,
+              "alerts": 689,
+              "tp": 552,
+              "fp": 137,
+              "fn": 510,
+              "tn": 50892,
+              "precision": 0.8011611030478955,
+              "recall": 0.519774011299435,
+              "fpr": 0.002684747888455584,
+              "f1": 0.6304968589377499
+            },
+            "detected_positive_accounts": {
+              "transactions": 552,
+              "payer_accounts": 297,
+              "receiver_accounts": 533,
+              "either_accounts": 816
+            },
+            "false_positive_accounts": {
+              "transactions": 137,
+              "payer_accounts": 135,
+              "receiver_accounts": 130,
+              "either_accounts": 265
+            }
+          },
+          ">=5": {
+            "samples": 4462970,
+            "positives": 2224,
+            "payer_accounts": 440629,
+            "receiver_accounts": 736065,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 4462970,
+              "positives": 2224,
+              "negatives": 4460746,
+              "alerts": 1442,
+              "tp": 985,
+              "fp": 457,
+              "fn": 1239,
+              "tn": 4460289,
+              "precision": 0.6830790568654647,
+              "recall": 0.44289568345323743,
+              "fpr": 0.00010244923158592755,
+              "f1": 0.5373704309874523
+            },
+            "detected_positive_accounts": {
+              "transactions": 985,
+              "payer_accounts": 570,
+              "receiver_accounts": 637,
+              "either_accounts": 1068
+            },
+            "false_positive_accounts": {
+              "transactions": 457,
+              "payer_accounts": 447,
+              "receiver_accounts": 442,
+              "either_accounts": 883
+            }
+          }
+        },
+        "receiver_support_24h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 3,
+              "fp": 1,
+              "fn": 10,
+              "tn": 92023,
+              "precision": 0.75,
+              "recall": 0.23076923076923078,
+              "fpr": 1.0866730418151786e-05,
+              "f1": 0.35294117647058826
+            },
+            "detected_positive_accounts": {
+              "transactions": 3,
+              "payer_accounts": 3,
+              "receiver_accounts": 3,
+              "either_accounts": 3
+            },
+            "false_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            }
+          },
+          "0": {
+            "samples": 1048048,
+            "positives": 2729,
+            "payer_accounts": 403019,
+            "receiver_accounts": 711139,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 1048048,
+              "positives": 2729,
+              "negatives": 1045319,
+              "alerts": 2027,
+              "tp": 1573,
+              "fp": 454,
+              "fn": 1156,
+              "tn": 1044865,
+              "precision": 0.7760236803157375,
+              "recall": 0.5764016123122023,
+              "fpr": 0.0004343171797317374,
+              "f1": 0.6614802354920101
+            },
+            "detected_positive_accounts": {
+              "transactions": 1573,
+              "payer_accounts": 1192,
+              "receiver_accounts": 1545,
+              "either_accounts": 2544
+            },
+            "false_positive_accounts": {
+              "transactions": 454,
+              "payer_accounts": 451,
+              "receiver_accounts": 450,
+              "either_accounts": 895
+            }
+          },
+          "1-4": {
+            "samples": 2960448,
+            "positives": 2954,
+            "payer_accounts": 471615,
+            "receiver_accounts": 694188,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 2960448,
+              "positives": 2954,
+              "negatives": 2957494,
+              "alerts": 1938,
+              "tp": 1571,
+              "fp": 367,
+              "fn": 1383,
+              "tn": 2957127,
+              "precision": 0.8106295149638802,
+              "recall": 0.5318212593094109,
+              "fpr": 0.00012409154507160455,
+              "f1": 0.6422730989370401
+            },
+            "detected_positive_accounts": {
+              "transactions": 1571,
+              "payer_accounts": 1264,
+              "receiver_accounts": 991,
+              "either_accounts": 2092
+            },
+            "false_positive_accounts": {
+              "transactions": 367,
+              "payer_accounts": 363,
+              "receiver_accounts": 348,
+              "either_accounts": 707
+            }
+          },
+          ">=5": {
+            "samples": 588473,
+            "positives": 724,
+            "payer_accounts": 225978,
+            "receiver_accounts": 183540,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 588473,
+              "positives": 724,
+              "negatives": 587749,
+              "alerts": 444,
+              "tp": 386,
+              "fp": 58,
+              "fn": 338,
+              "tn": 587691,
+              "precision": 0.8693693693693694,
+              "recall": 0.5331491712707183,
+              "fpr": 9.868158006223745e-05,
+              "f1": 0.660958904109589
+            },
+            "detected_positive_accounts": {
+              "transactions": 386,
+              "payer_accounts": 349,
+              "receiver_accounts": 191,
+              "either_accounts": 518
+            },
+            "false_positive_accounts": {
+              "transactions": 58,
+              "payer_accounts": 56,
+              "receiver_accounts": 49,
+              "either_accounts": 105
+            }
+          }
+        },
+        "receiver_support_72h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 3,
+              "fp": 1,
+              "fn": 10,
+              "tn": 92023,
+              "precision": 0.75,
+              "recall": 0.23076923076923078,
+              "fpr": 1.0866730418151786e-05,
+              "f1": 0.35294117647058826
+            },
+            "detected_positive_accounts": {
+              "transactions": 3,
+              "payer_accounts": 3,
+              "receiver_accounts": 3,
+              "either_accounts": 3
+            },
+            "false_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            }
+          },
+          "0": {
+            "samples": 161206,
+            "positives": 1543,
+            "payer_accounts": 125600,
+            "receiver_accounts": 155755,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 161206,
+              "positives": 1543,
+              "negatives": 159663,
+              "alerts": 1115,
+              "tp": 891,
+              "fp": 224,
+              "fn": 652,
+              "tn": 159439,
+              "precision": 0.7991031390134529,
+              "recall": 0.577446532728451,
+              "fpr": 0.001402954973913806,
+              "f1": 0.6704288939051919
+            },
+            "detected_positive_accounts": {
+              "transactions": 891,
+              "payer_accounts": 702,
+              "receiver_accounts": 891,
+              "either_accounts": 1538
+            },
+            "false_positive_accounts": {
+              "transactions": 224,
+              "payer_accounts": 224,
+              "receiver_accounts": 224,
+              "either_accounts": 447
+            }
+          },
+          "1-4": {
+            "samples": 1572134,
+            "positives": 2167,
+            "payer_accounts": 384539,
+            "receiver_accounts": 552181,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 1572134,
+              "positives": 2167,
+              "negatives": 1569967,
+              "alerts": 1412,
+              "tp": 1030,
+              "fp": 382,
+              "fn": 1137,
+              "tn": 1569585,
+              "precision": 0.7294617563739377,
+              "recall": 0.47531149053991695,
+              "fpr": 0.00024331721622174225,
+              "f1": 0.5755797708857223
+            },
+            "detected_positive_accounts": {
+              "transactions": 1030,
+              "payer_accounts": 883,
+              "receiver_accounts": 831,
+              "either_accounts": 1626
+            },
+            "false_positive_accounts": {
+              "transactions": 382,
+              "payer_accounts": 375,
+              "receiver_accounts": 369,
+              "either_accounts": 738
+            }
+          },
+          ">=5": {
+            "samples": 2863629,
+            "positives": 2697,
+            "payer_accounts": 422759,
+            "receiver_accounts": 463442,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 2863629,
+              "positives": 2697,
+              "negatives": 2860932,
+              "alerts": 1882,
+              "tp": 1609,
+              "fp": 273,
+              "fn": 1088,
+              "tn": 2860659,
+              "precision": 0.8549415515409139,
+              "recall": 0.596588802373007,
+              "fpr": 9.542344942137738e-05,
+              "f1": 0.7027735313387202
+            },
+            "detected_positive_accounts": {
+              "transactions": 1609,
+              "payer_accounts": 1255,
+              "receiver_accounts": 879,
+              "either_accounts": 1984
+            },
+            "false_positive_accounts": {
+              "transactions": 273,
+              "payer_accounts": 270,
+              "receiver_accounts": 243,
+              "either_accounts": 511
+            }
+          }
+        },
+        "receiver_support_7d": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 3,
+              "fp": 1,
+              "fn": 10,
+              "tn": 92023,
+              "precision": 0.75,
+              "recall": 0.23076923076923078,
+              "fpr": 1.0866730418151786e-05,
+              "f1": 0.35294117647058826
+            },
+            "detected_positive_accounts": {
+              "transactions": 3,
+              "payer_accounts": 3,
+              "receiver_accounts": 3,
+              "either_accounts": 3
+            },
+            "false_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            }
+          },
+          "0": {
+            "samples": 25771,
+            "positives": 1096,
+            "payer_accounts": 24231,
+            "receiver_accounts": 24490,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 25771,
+              "positives": 1096,
+              "negatives": 24675,
+              "alerts": 789,
+              "tp": 655,
+              "fp": 134,
+              "fn": 441,
+              "tn": 24541,
+              "precision": 0.8301647655259823,
+              "recall": 0.5976277372262774,
+              "fpr": 0.005430597771023303,
+              "f1": 0.6949602122015915
+            },
+            "detected_positive_accounts": {
+              "transactions": 655,
+              "payer_accounts": 524,
+              "receiver_accounts": 655,
+              "either_accounts": 1147
+            },
+            "false_positive_accounts": {
+              "transactions": 134,
+              "payer_accounts": 134,
+              "receiver_accounts": 134,
+              "either_accounts": 268
+            }
+          },
+          "1-4": {
+            "samples": 80926,
+            "positives": 1264,
+            "payer_accounts": 66040,
+            "receiver_accounts": 49779,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 80926,
+              "positives": 1264,
+              "negatives": 79662,
+              "alerts": 819,
+              "tp": 587,
+              "fp": 232,
+              "fn": 677,
+              "tn": 79430,
+              "precision": 0.7167277167277167,
+              "recall": 0.46439873417721517,
+              "fpr": 0.0029123044864552737,
+              "f1": 0.5636101776284206
+            },
+            "detected_positive_accounts": {
+              "transactions": 587,
+              "payer_accounts": 543,
+              "receiver_accounts": 470,
+              "either_accounts": 1000
+            },
+            "false_positive_accounts": {
+              "transactions": 232,
+              "payer_accounts": 229,
+              "receiver_accounts": 224,
+              "either_accounts": 453
+            }
+          },
+          ">=5": {
+            "samples": 4490272,
+            "positives": 4047,
+            "payer_accounts": 509210,
+            "receiver_accounts": 704809,
+            "operating_point": {
+              "threshold": 0.945133626461029,
+              "samples": 4490272,
+              "positives": 4047,
+              "negatives": 4486225,
+              "alerts": 2801,
+              "tp": 2288,
+              "fp": 513,
+              "fn": 1759,
+              "tn": 4485712,
+              "precision": 0.8168511245983577,
+              "recall": 0.5653570546083518,
+              "fpr": 0.00011435003817240553,
+              "f1": 0.6682242990654206
+            },
+            "detected_positive_accounts": {
+              "transactions": 2288,
+              "payer_accounts": 1722,
+              "receiver_accounts": 1416,
+              "either_accounts": 2860
+            },
+            "false_positive_accounts": {
+              "transactions": 513,
+              "payer_accounts": 506,
+              "receiver_accounts": 477,
+              "either_accounts": 980
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "features_only",
+      "model_path": "result\\gnn_tuning_v2\\trials\\features_only\\final_model.pt",
+      "model_sha256": "2a1490fd57bad351154327c87a24096c40d80b04b94c4cf81557188fd98ecf65",
+      "training_config_sha256": "d66dd8b9f3885a82098feb34a36c4ec0b14cb801a962cb7d86a16776288eb696",
+      "training_result_sha256": "61990aa53456c96b4110a1e1f9446e66b627a8d51e8a8d65c1557e890bdc2a12",
+      "evaluation_config_sha256": "d13dab1763b8a425e12b09c0f68fda91f4d37a3dc6f8d4eca8b058038838ec0e",
+      "metrics_sha256": "d134b51da9f4ddc7904462c198335b7ddd8dfc82b2bfee47d63b2c2b4ca82fb5",
+      "metrics": {
+        "samples": 4689006,
+        "positives": 6420,
+        "negatives": 4682586,
+        "positive_rate": 0.0013691601162378552,
+        "average_precision": 0.611119652036977,
+        "pr_auc_definition": "average_precision (step integral)",
+        "roc_auc": 0.9798391300284425,
+        "threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.11067720090293454,
+          "recall": 0.7637071651090342,
+          "f1": 0.19333596214511042,
+          "fpr": 0.008413513387687914,
+          "tp": 4903,
+          "fp": 39397,
+          "tn": 4643189,
+          "fn": 1517
+        },
+        "best_f1": {
+          "threshold": 0.9934593439102173,
+          "precision": 0.8191214470284238,
+          "recall": 0.5431464174454829,
+          "f1": 0.6531797321344948,
+          "fpr": 0.000164439051413044,
+          "tp": 3487,
+          "fp": 770,
+          "tn": 4681816,
+          "fn": 2933
+        },
+        "recall_at_fpr": {
+          "0.001": {
+            "threshold": 0.9252215623855591,
+            "precision": 0.4663870441570546,
+            "recall": 0.6235202492211838,
+            "f1": 0.533626608011731,
+            "fpr": 0.0009780920200931707,
+            "tp": 4003,
+            "fp": 4580,
+            "tn": 4678006,
+            "fn": 2417
+          },
+          "0.01": {
+            "threshold": 0.3282160460948944,
+            "precision": 0.09727936039742296,
+            "recall": 0.7808411214953271,
+            "f1": 0.17300524572059636,
+            "fpr": 0.009934467834653758,
+            "tp": 5013,
+            "fp": 46519,
+            "tn": 4636067,
+            "fn": 1407
+          }
+        }
+      },
+      "precision80": {
+        "threshold": 0.9911800026893616,
+        "samples": 4689006,
+        "positives": 6420,
+        "negatives": 4682586,
+        "alerts": 4417,
+        "tp": 3535,
+        "fp": 882,
+        "fn": 2885,
+        "tn": 4681704,
+        "precision": 0.8003169572107766,
+        "recall": 0.5506230529595015,
+        "fpr": 0.00018835745889130495,
+        "f1": 0.6523945741441358
+      },
+      "non_ach_precision80": {
+        "threshold": 0.9911800026893616,
+        "samples": 4104569,
+        "positives": 715,
+        "negatives": 4103854,
+        "alerts": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 715,
+        "tn": 4103854,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "f1": 0.0
+      },
+      "qualification": {
+        "passed": false,
+        "precision": true,
+        "overall_recall": true,
+        "non_ach_recall": false
+      },
+      "groups": {
+        "payment_format": {
+          "ACH": {
+            "samples": 584437,
+            "positives": 5705,
+            "payer_accounts": 255079,
+            "receiver_accounts": 199520,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 584437,
+              "positives": 5705,
+              "negatives": 578732,
+              "alerts": 4417,
+              "tp": 3535,
+              "fp": 882,
+              "fn": 2170,
+              "tn": 577850,
+              "precision": 0.8003169572107766,
+              "recall": 0.6196319018404908,
+              "fpr": 0.0015240214814456433,
+              "f1": 0.6984785615491009
+            },
+            "detected_positive_accounts": {
+              "transactions": 3535,
+              "payer_accounts": 2546,
+              "receiver_accounts": 2482,
+              "either_accounts": 4454
+            },
+            "false_positive_accounts": {
+              "transactions": 882,
+              "payer_accounts": 867,
+              "receiver_accounts": 840,
+              "either_accounts": 1682
+            }
+          },
+          "Bitcoin": {
+            "samples": 103938,
+            "positives": 44,
+            "payer_accounts": 14313,
+            "receiver_accounts": 17921,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 103938,
+              "positives": 44,
+              "negatives": 103894,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 44,
+              "tn": 103894,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Cash": {
+            "samples": 495358,
+            "positives": 94,
+            "payer_accounts": 139617,
+            "receiver_accounts": 198372,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 495358,
+              "positives": 94,
+              "negatives": 495264,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 94,
+              "tn": 495264,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Cheque": {
+            "samples": 1920524,
+            "positives": 363,
+            "payer_accounts": 398993,
+            "receiver_accounts": 673836,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 1920524,
+              "positives": 363,
+              "negatives": 1920161,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 363,
+              "tn": 1920161,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Credit Card": {
+            "samples": 1409826,
+            "positives": 214,
+            "payer_accounts": 337402,
+            "receiver_accounts": 521299,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 1409826,
+              "positives": 214,
+              "negatives": 1409612,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 214,
+              "tn": 1409612,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Wire": {
+            "samples": 174923,
+            "positives": 0,
+            "payer_accounts": 67202,
+            "receiver_accounts": 72171,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 174923,
+              "positives": 0,
+              "negatives": 174923,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 174923,
+              "precision": null,
+              "recall": null,
+              "fpr": 0.0,
+              "f1": null
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          }
+        },
+        "ach_group": {
+          "ACH": {
+            "samples": 584437,
+            "positives": 5705,
+            "payer_accounts": 255079,
+            "receiver_accounts": 199520,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 584437,
+              "positives": 5705,
+              "negatives": 578732,
+              "alerts": 4417,
+              "tp": 3535,
+              "fp": 882,
+              "fn": 2170,
+              "tn": 577850,
+              "precision": 0.8003169572107766,
+              "recall": 0.6196319018404908,
+              "fpr": 0.0015240214814456433,
+              "f1": 0.6984785615491009
+            },
+            "detected_positive_accounts": {
+              "transactions": 3535,
+              "payer_accounts": 2546,
+              "receiver_accounts": 2482,
+              "either_accounts": 4454
+            },
+            "false_positive_accounts": {
+              "transactions": 882,
+              "payer_accounts": 867,
+              "receiver_accounts": 840,
+              "either_accounts": 1682
+            }
+          },
+          "non_ACH": {
+            "samples": 4104569,
+            "positives": 715,
+            "payer_accounts": 448281,
+            "receiver_accounts": 733502,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 4104569,
+              "positives": 715,
+              "negatives": 4103854,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 715,
+              "tn": 4103854,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          }
+        },
+        "payer_bank70": {
+          "bank70": {
+            "samples": 29,
+            "positives": 1,
+            "payer_accounts": 11,
+            "receiver_accounts": 13,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 29,
+              "positives": 1,
+              "negatives": 28,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "tn": 28,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "other": {
+            "samples": 4688977,
+            "positives": 6419,
+            "payer_accounts": 549649,
+            "receiver_accounts": 759185,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 4688977,
+              "positives": 6419,
+              "negatives": 4682558,
+              "alerts": 4417,
+              "tp": 3535,
+              "fp": 882,
+              "fn": 2884,
+              "tn": 4681676,
+              "precision": 0.8003169572107766,
+              "recall": 0.5507088331515813,
+              "fpr": 0.00018835858520065314,
+              "f1": 0.6524547803617571
+            },
+            "detected_positive_accounts": {
+              "transactions": 3535,
+              "payer_accounts": 2546,
+              "receiver_accounts": 2482,
+              "either_accounts": 4454
+            },
+            "false_positive_accounts": {
+              "transactions": 882,
+              "payer_accounts": 867,
+              "receiver_accounts": 840,
+              "either_accounts": 1682
+            }
+          }
+        },
+        "receiver_bank70": {
+          "bank70": {
+            "samples": 175,
+            "positives": 0,
+            "payer_accounts": 40,
+            "receiver_accounts": 27,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 175,
+              "positives": 0,
+              "negatives": 175,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 175,
+              "precision": null,
+              "recall": null,
+              "fpr": 0.0,
+              "f1": null
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "other": {
+            "samples": 4688831,
+            "positives": 6420,
+            "payer_accounts": 549649,
+            "receiver_accounts": 759161,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 4688831,
+              "positives": 6420,
+              "negatives": 4682411,
+              "alerts": 4417,
+              "tp": 3535,
+              "fp": 882,
+              "fn": 2885,
+              "tn": 4681529,
+              "precision": 0.8003169572107766,
+              "recall": 0.5506230529595015,
+              "fpr": 0.00018836449854572784,
+              "f1": 0.6523945741441358
+            },
+            "detected_positive_accounts": {
+              "transactions": 3535,
+              "payer_accounts": 2546,
+              "receiver_accounts": 2482,
+              "either_accounts": 4454
+            },
+            "false_positive_accounts": {
+              "transactions": 882,
+              "payer_accounts": 867,
+              "receiver_accounts": 840,
+              "either_accounts": 1682
+            }
+          }
+        },
+        "date": {
+          "2022-09-11": {
+            "samples": 830142,
+            "positives": 1966,
+            "payer_accounts": 303725,
+            "receiver_accounts": 382675,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 830142,
+              "positives": 1966,
+              "negatives": 828176,
+              "alerts": 1429,
+              "tp": 1161,
+              "fp": 268,
+              "fn": 805,
+              "tn": 827908,
+              "precision": 0.8124562631210637,
+              "recall": 0.5905391658189216,
+              "fpr": 0.00032360271246691525,
+              "f1": 0.6839469808541974
+            },
+            "detected_positive_accounts": {
+              "transactions": 1161,
+              "payer_accounts": 954,
+              "receiver_accounts": 946,
+              "either_accounts": 1763
+            },
+            "false_positive_accounts": {
+              "transactions": 268,
+              "payer_accounts": 267,
+              "receiver_accounts": 261,
+              "either_accounts": 525
+            }
+          },
+          "2022-09-12": {
+            "samples": 1930240,
+            "positives": 2179,
+            "payer_accounts": 482269,
+            "receiver_accounts": 727806,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 1930240,
+              "positives": 2179,
+              "negatives": 1928061,
+              "alerts": 1502,
+              "tp": 1163,
+              "fp": 339,
+              "fn": 1016,
+              "tn": 1927722,
+              "precision": 0.774300932090546,
+              "recall": 0.5337310692978431,
+              "fpr": 0.0001758243126125159,
+              "f1": 0.6318935071991306
+            },
+            "detected_positive_accounts": {
+              "transactions": 1163,
+              "payer_accounts": 948,
+              "receiver_accounts": 946,
+              "either_accounts": 1763
+            },
+            "false_positive_accounts": {
+              "transactions": 339,
+              "payer_accounts": 336,
+              "receiver_accounts": 334,
+              "either_accounts": 666
+            }
+          },
+          "2022-09-13": {
+            "samples": 1928624,
+            "positives": 2275,
+            "payer_accounts": 480917,
+            "receiver_accounts": 727995,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 1928624,
+              "positives": 2275,
+              "negatives": 1926349,
+              "alerts": 1486,
+              "tp": 1211,
+              "fp": 275,
+              "fn": 1064,
+              "tn": 1926074,
+              "precision": 0.8149394347240915,
+              "recall": 0.5323076923076923,
+              "fpr": 0.0001427571016466902,
+              "f1": 0.6439776655144909
+            },
+            "detected_positive_accounts": {
+              "transactions": 1211,
+              "payer_accounts": 987,
+              "receiver_accounts": 980,
+              "either_accounts": 1838
+            },
+            "false_positive_accounts": {
+              "transactions": 275,
+              "payer_accounts": 272,
+              "receiver_accounts": 263,
+              "either_accounts": 531
+            }
+          }
+        },
+        "payer_support_24h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 1,
+              "tp": 1,
+              "fp": 0,
+              "fn": 12,
+              "tn": 92024,
+              "precision": 1.0,
+              "recall": 0.07692307692307693,
+              "fpr": 0.0,
+              "f1": 0.14285714285714285
+            },
+            "detected_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 660566,
+            "positives": 4144,
+            "payer_accounts": 476244,
+            "receiver_accounts": 377230,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 660566,
+              "positives": 4144,
+              "negatives": 656422,
+              "alerts": 2912,
+              "tp": 2418,
+              "fp": 494,
+              "fn": 1726,
+              "tn": 655928,
+              "precision": 0.8303571428571429,
+              "recall": 0.5834942084942085,
+              "fpr": 0.0007525646611478592,
+              "f1": 0.685374149659864
+            },
+            "detected_positive_accounts": {
+              "transactions": 2418,
+              "payer_accounts": 2170,
+              "receiver_accounts": 1811,
+              "either_accounts": 3624
+            },
+            "false_positive_accounts": {
+              "transactions": 494,
+              "payer_accounts": 493,
+              "receiver_accounts": 476,
+              "either_accounts": 960
+            }
+          },
+          "1-4": {
+            "samples": 1996033,
+            "positives": 1196,
+            "payer_accounts": 434294,
+            "receiver_accounts": 577349,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 1996033,
+              "positives": 1196,
+              "negatives": 1994837,
+              "alerts": 1074,
+              "tp": 804,
+              "fp": 270,
+              "fn": 392,
+              "tn": 1994567,
+              "precision": 0.7486033519553073,
+              "recall": 0.6722408026755853,
+              "fpr": 0.00013534940448768496,
+              "f1": 0.7083700440528634
+            },
+            "detected_positive_accounts": {
+              "transactions": 804,
+              "payer_accounts": 449,
+              "receiver_accounts": 653,
+              "either_accounts": 1004
+            },
+            "false_positive_accounts": {
+              "transactions": 270,
+              "payer_accounts": 263,
+              "receiver_accounts": 261,
+              "either_accounts": 518
+            }
+          },
+          ">=5": {
+            "samples": 1940370,
+            "positives": 1067,
+            "payer_accounts": 176781,
+            "receiver_accounts": 481146,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 1940370,
+              "positives": 1067,
+              "negatives": 1939303,
+              "alerts": 430,
+              "tp": 312,
+              "fp": 118,
+              "fn": 755,
+              "tn": 1939185,
+              "precision": 0.7255813953488373,
+              "recall": 0.2924086223055295,
+              "fpr": 6.084660313525014e-05,
+              "f1": 0.4168336673346693
+            },
+            "detected_positive_accounts": {
+              "transactions": 312,
+              "payer_accounts": 200,
+              "receiver_accounts": 242,
+              "either_accounts": 417
+            },
+            "false_positive_accounts": {
+              "transactions": 118,
+              "payer_accounts": 115,
+              "receiver_accounts": 116,
+              "either_accounts": 231
+            }
+          }
+        },
+        "payer_support_72h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 1,
+              "tp": 1,
+              "fp": 0,
+              "fn": 12,
+              "tn": 92024,
+              "precision": 1.0,
+              "recall": 0.07692307692307693,
+              "fpr": 0.0,
+              "f1": 0.14285714285714285
+            },
+            "detected_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 173134,
+            "positives": 3488,
+            "payer_accounts": 169559,
+            "receiver_accounts": 96232,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 173134,
+              "positives": 3488,
+              "negatives": 169646,
+              "alerts": 2444,
+              "tp": 2085,
+              "fp": 359,
+              "fn": 1403,
+              "tn": 169287,
+              "precision": 0.8531096563011457,
+              "recall": 0.5977637614678899,
+              "fpr": 0.0021161713214576236,
+              "f1": 0.7029669588671612
+            },
+            "detected_positive_accounts": {
+              "transactions": 2085,
+              "payer_accounts": 1965,
+              "receiver_accounts": 1534,
+              "either_accounts": 3220
+            },
+            "false_positive_accounts": {
+              "transactions": 359,
+              "payer_accounts": 359,
+              "receiver_accounts": 344,
+              "either_accounts": 696
+            }
+          },
+          "1-4": {
+            "samples": 855574,
+            "positives": 1185,
+            "payer_accounts": 299206,
+            "receiver_accounts": 323821,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 855574,
+              "positives": 1185,
+              "negatives": 854389,
+              "alerts": 903,
+              "tp": 712,
+              "fp": 191,
+              "fn": 473,
+              "tn": 854198,
+              "precision": 0.7884828349944629,
+              "recall": 0.60084388185654,
+              "fpr": 0.00022355156726034628,
+              "f1": 0.6819923371647509
+            },
+            "detected_positive_accounts": {
+              "transactions": 712,
+              "payer_accounts": 378,
+              "receiver_accounts": 650,
+              "either_accounts": 980
+            },
+            "false_positive_accounts": {
+              "transactions": 191,
+              "payer_accounts": 189,
+              "receiver_accounts": 185,
+              "either_accounts": 372
+            }
+          },
+          ">=5": {
+            "samples": 3568261,
+            "positives": 1734,
+            "payer_accounts": 299457,
+            "receiver_accounts": 641369,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 3568261,
+              "positives": 1734,
+              "negatives": 3566527,
+              "alerts": 1069,
+              "tp": 737,
+              "fp": 332,
+              "fn": 997,
+              "tn": 3566195,
+              "precision": 0.6894293732460243,
+              "recall": 0.42502883506343714,
+              "fpr": 9.308775736171352e-05,
+              "f1": 0.5258651444880486
+            },
+            "detected_positive_accounts": {
+              "transactions": 737,
+              "payer_accounts": 421,
+              "receiver_accounts": 495,
+              "either_accounts": 830
+            },
+            "false_positive_accounts": {
+              "transactions": 332,
+              "payer_accounts": 323,
+              "receiver_accounts": 323,
+              "either_accounts": 643
+            }
+          }
+        },
+        "payer_support_7d": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 1,
+              "tp": 1,
+              "fp": 0,
+              "fn": 12,
+              "tn": 92024,
+              "precision": 1.0,
+              "recall": 0.07692307692307693,
+              "fpr": 0.0,
+              "f1": 0.14285714285714285
+            },
+            "detected_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 81908,
+            "positives": 3121,
+            "payer_accounts": 81355,
+            "receiver_accounts": 24247,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 81908,
+              "positives": 3121,
+              "negatives": 78787,
+              "alerts": 2269,
+              "tp": 1994,
+              "fp": 275,
+              "fn": 1127,
+              "tn": 78512,
+              "precision": 0.8788012340237991,
+              "recall": 0.6388977891701377,
+              "fpr": 0.0034904235470318706,
+              "f1": 0.7398886827458256
+            },
+            "detected_positive_accounts": {
+              "transactions": 1994,
+              "payer_accounts": 1886,
+              "receiver_accounts": 1472,
+              "either_accounts": 3097
+            },
+            "false_positive_accounts": {
+              "transactions": 275,
+              "payer_accounts": 275,
+              "receiver_accounts": 260,
+              "either_accounts": 529
+            }
+          },
+          "1-4": {
+            "samples": 52091,
+            "positives": 1062,
+            "payer_accounts": 44591,
+            "receiver_accounts": 22950,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 52091,
+              "positives": 1062,
+              "negatives": 51029,
+              "alerts": 670,
+              "tp": 554,
+              "fp": 116,
+              "fn": 508,
+              "tn": 50913,
+              "precision": 0.826865671641791,
+              "recall": 0.5216572504708098,
+              "fpr": 0.002273217190225166,
+              "f1": 0.6397228637413395
+            },
+            "detected_positive_accounts": {
+              "transactions": 554,
+              "payer_accounts": 303,
+              "receiver_accounts": 538,
+              "either_accounts": 826
+            },
+            "false_positive_accounts": {
+              "transactions": 116,
+              "payer_accounts": 116,
+              "receiver_accounts": 113,
+              "either_accounts": 229
+            }
+          },
+          ">=5": {
+            "samples": 4462970,
+            "positives": 2224,
+            "payer_accounts": 440629,
+            "receiver_accounts": 736065,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 4462970,
+              "positives": 2224,
+              "negatives": 4460746,
+              "alerts": 1477,
+              "tp": 986,
+              "fp": 491,
+              "fn": 1238,
+              "tn": 4460255,
+              "precision": 0.6675693974272173,
+              "recall": 0.4433453237410072,
+              "fpr": 0.00011007127507372085,
+              "f1": 0.5328289651445556
+            },
+            "detected_positive_accounts": {
+              "transactions": 986,
+              "payer_accounts": 566,
+              "receiver_accounts": 641,
+              "either_accounts": 1065
+            },
+            "false_positive_accounts": {
+              "transactions": 491,
+              "payer_accounts": 477,
+              "receiver_accounts": 474,
+              "either_accounts": 945
+            }
+          }
+        },
+        "receiver_support_24h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 1,
+              "tp": 1,
+              "fp": 0,
+              "fn": 12,
+              "tn": 92024,
+              "precision": 1.0,
+              "recall": 0.07692307692307693,
+              "fpr": 0.0,
+              "f1": 0.14285714285714285
+            },
+            "detected_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 1048048,
+            "positives": 2729,
+            "payer_accounts": 403019,
+            "receiver_accounts": 711139,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 1048048,
+              "positives": 2729,
+              "negatives": 1045319,
+              "alerts": 2138,
+              "tp": 1627,
+              "fp": 511,
+              "fn": 1102,
+              "tn": 1044808,
+              "precision": 0.7609915809167446,
+              "recall": 0.5961890802491755,
+              "fpr": 0.0004888459886407882,
+              "f1": 0.6685843435381138
+            },
+            "detected_positive_accounts": {
+              "transactions": 1627,
+              "payer_accounts": 1233,
+              "receiver_accounts": 1592,
+              "either_accounts": 2627
+            },
+            "false_positive_accounts": {
+              "transactions": 511,
+              "payer_accounts": 507,
+              "receiver_accounts": 506,
+              "either_accounts": 1004
+            }
+          },
+          "1-4": {
+            "samples": 2960448,
+            "positives": 2954,
+            "payer_accounts": 471615,
+            "receiver_accounts": 694188,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 2960448,
+              "positives": 2954,
+              "negatives": 2957494,
+              "alerts": 1853,
+              "tp": 1536,
+              "fp": 317,
+              "fn": 1418,
+              "tn": 2957177,
+              "precision": 0.8289260658391797,
+              "recall": 0.5199729180771835,
+              "fpr": 0.00010718534002097722,
+              "f1": 0.6390680257957145
+            },
+            "detected_positive_accounts": {
+              "transactions": 1536,
+              "payer_accounts": 1233,
+              "receiver_accounts": 964,
+              "either_accounts": 2035
+            },
+            "false_positive_accounts": {
+              "transactions": 317,
+              "payer_accounts": 315,
+              "receiver_accounts": 303,
+              "either_accounts": 612
+            }
+          },
+          ">=5": {
+            "samples": 588473,
+            "positives": 724,
+            "payer_accounts": 225978,
+            "receiver_accounts": 183540,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 588473,
+              "positives": 724,
+              "negatives": 587749,
+              "alerts": 425,
+              "tp": 371,
+              "fp": 54,
+              "fn": 353,
+              "tn": 587695,
+              "precision": 0.8729411764705882,
+              "recall": 0.5124309392265194,
+              "fpr": 9.187595385104867e-05,
+              "f1": 0.6457789382071366
+            },
+            "detected_positive_accounts": {
+              "transactions": 371,
+              "payer_accounts": 334,
+              "receiver_accounts": 180,
+              "either_accounts": 494
+            },
+            "false_positive_accounts": {
+              "transactions": 54,
+              "payer_accounts": 52,
+              "receiver_accounts": 47,
+              "either_accounts": 99
+            }
+          }
+        },
+        "receiver_support_72h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 1,
+              "tp": 1,
+              "fp": 0,
+              "fn": 12,
+              "tn": 92024,
+              "precision": 1.0,
+              "recall": 0.07692307692307693,
+              "fpr": 0.0,
+              "f1": 0.14285714285714285
+            },
+            "detected_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 161206,
+            "positives": 1543,
+            "payer_accounts": 125600,
+            "receiver_accounts": 155755,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 161206,
+              "positives": 1543,
+              "negatives": 159663,
+              "alerts": 1217,
+              "tp": 923,
+              "fp": 294,
+              "fn": 620,
+              "tn": 159369,
+              "precision": 0.7584223500410846,
+              "recall": 0.5981853532080363,
+              "fpr": 0.0018413784032618704,
+              "f1": 0.6688405797101449
+            },
+            "detected_positive_accounts": {
+              "transactions": 923,
+              "payer_accounts": 728,
+              "receiver_accounts": 923,
+              "either_accounts": 1595
+            },
+            "false_positive_accounts": {
+              "transactions": 294,
+              "payer_accounts": 294,
+              "receiver_accounts": 294,
+              "either_accounts": 586
+            }
+          },
+          "1-4": {
+            "samples": 1572134,
+            "positives": 2167,
+            "payer_accounts": 384539,
+            "receiver_accounts": 552181,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 1572134,
+              "positives": 2167,
+              "negatives": 1569967,
+              "alerts": 1409,
+              "tp": 1040,
+              "fp": 369,
+              "fn": 1127,
+              "tn": 1569598,
+              "precision": 0.7381121362668559,
+              "recall": 0.47992616520535303,
+              "fpr": 0.0002350367873974421,
+              "f1": 0.5816554809843401
+            },
+            "detected_positive_accounts": {
+              "transactions": 1040,
+              "payer_accounts": 891,
+              "receiver_accounts": 837,
+              "either_accounts": 1642
+            },
+            "false_positive_accounts": {
+              "transactions": 369,
+              "payer_accounts": 364,
+              "receiver_accounts": 356,
+              "either_accounts": 715
+            }
+          },
+          ">=5": {
+            "samples": 2863629,
+            "positives": 2697,
+            "payer_accounts": 422759,
+            "receiver_accounts": 463442,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 2863629,
+              "positives": 2697,
+              "negatives": 2860932,
+              "alerts": 1790,
+              "tp": 1571,
+              "fp": 219,
+              "fn": 1126,
+              "tn": 2860713,
+              "precision": 0.8776536312849162,
+              "recall": 0.5824990730441231,
+              "fpr": 7.654848140396206e-05,
+              "f1": 0.7002451526632494
+            },
+            "detected_positive_accounts": {
+              "transactions": 1571,
+              "payer_accounts": 1217,
+              "receiver_accounts": 858,
+              "either_accounts": 1927
+            },
+            "false_positive_accounts": {
+              "transactions": 219,
+              "payer_accounts": 216,
+              "receiver_accounts": 196,
+              "either_accounts": 409
+            }
+          }
+        },
+        "receiver_support_7d": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 1,
+              "tp": 1,
+              "fp": 0,
+              "fn": 12,
+              "tn": 92024,
+              "precision": 1.0,
+              "recall": 0.07692307692307693,
+              "fpr": 0.0,
+              "f1": 0.14285714285714285
+            },
+            "detected_positive_accounts": {
+              "transactions": 1,
+              "payer_accounts": 1,
+              "receiver_accounts": 1,
+              "either_accounts": 1
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 25771,
+            "positives": 1096,
+            "payer_accounts": 24231,
+            "receiver_accounts": 24490,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 25771,
+              "positives": 1096,
+              "negatives": 24675,
+              "alerts": 896,
+              "tp": 690,
+              "fp": 206,
+              "fn": 406,
+              "tn": 24469,
+              "precision": 0.7700892857142857,
+              "recall": 0.6295620437956204,
+              "fpr": 0.008348530901722391,
+              "f1": 0.6927710843373494
+            },
+            "detected_positive_accounts": {
+              "transactions": 690,
+              "payer_accounts": 555,
+              "receiver_accounts": 690,
+              "either_accounts": 1213
+            },
+            "false_positive_accounts": {
+              "transactions": 206,
+              "payer_accounts": 206,
+              "receiver_accounts": 206,
+              "either_accounts": 411
+            }
+          },
+          "1-4": {
+            "samples": 80926,
+            "positives": 1264,
+            "payer_accounts": 66040,
+            "receiver_accounts": 49779,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 80926,
+              "positives": 1264,
+              "negatives": 79662,
+              "alerts": 824,
+              "tp": 600,
+              "fp": 224,
+              "fn": 664,
+              "tn": 79438,
+              "precision": 0.7281553398058253,
+              "recall": 0.47468354430379744,
+              "fpr": 0.0028118801938188847,
+              "f1": 0.5747126436781609
+            },
+            "detected_positive_accounts": {
+              "transactions": 600,
+              "payer_accounts": 556,
+              "receiver_accounts": 479,
+              "either_accounts": 1021
+            },
+            "false_positive_accounts": {
+              "transactions": 224,
+              "payer_accounts": 222,
+              "receiver_accounts": 216,
+              "either_accounts": 437
+            }
+          },
+          ">=5": {
+            "samples": 4490272,
+            "positives": 4047,
+            "payer_accounts": 509210,
+            "receiver_accounts": 704809,
+            "operating_point": {
+              "threshold": 0.9911800026893616,
+              "samples": 4490272,
+              "positives": 4047,
+              "negatives": 4486225,
+              "alerts": 2696,
+              "tp": 2244,
+              "fp": 452,
+              "fn": 1803,
+              "tn": 4485773,
+              "precision": 0.8323442136498517,
+              "recall": 0.5544848035581913,
+              "fpr": 0.0001007528601441078,
+              "f1": 0.6655791190864601
+            },
+            "detected_positive_accounts": {
+              "transactions": 2244,
+              "payer_accounts": 1681,
+              "receiver_accounts": 1387,
+              "either_accounts": 2790
+            },
+            "false_positive_accounts": {
+              "transactions": 452,
+              "payer_accounts": 444,
+              "receiver_accounts": 422,
+              "either_accounts": 862
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "features_pruned",
+      "model_path": "result\\gnn_tuning_v2\\trials\\features_pruned\\final_model.pt",
+      "model_sha256": "373ac8cbfd81f080e4d7c725e56ca2fd36f8b35efa48b81a09837507e6137a5d",
+      "training_config_sha256": "36f07137dbe4df922bef55dd766ee4b0057214288c4ec5d871838f17ec6e6e7f",
+      "training_result_sha256": "799570e523d6e96b6a8eeb91666e73f2f8d5cb4e2572577f587451704060b7ff",
+      "evaluation_config_sha256": "ad43eec1277de90fd07467671f88191e7e300affec174afea99e5e685e3ffdb7",
+      "metrics_sha256": "4b721518fbe253ea5c5483b13849e6837ed83fe666a6c4021541a64ee79266d6",
+      "metrics": {
+        "samples": 4689006,
+        "positives": 6420,
+        "negatives": 4682586,
+        "positive_rate": 0.0013691601162378552,
+        "average_precision": 0.6102156959591348,
+        "pr_auc_definition": "average_precision (step integral)",
+        "roc_auc": 0.9831741879559953,
+        "threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.23779553415061297,
+          "recall": 0.676791277258567,
+          "f1": 0.35193584966790864,
+          "fpr": 0.002974211258479823,
+          "tp": 4345,
+          "fp": 13927,
+          "tn": 4668659,
+          "fn": 2075
+        },
+        "best_f1": {
+          "threshold": 0.978283166885376,
+          "precision": 0.794632704116443,
+          "recall": 0.5442367601246106,
+          "f1": 0.6460201534621429,
+          "fpr": 0.00019284216029347886,
+          "tp": 3494,
+          "fp": 903,
+          "tn": 4681683,
+          "fn": 2926
+        },
+        "recall_at_fpr": {
+          "0.001": {
+            "threshold": 0.785717785358429,
+            "precision": 0.4597807270628967,
+            "recall": 0.6205607476635514,
+            "f1": 0.5282068279748094,
+            "fpr": 0.000999661298265531,
+            "tp": 3984,
+            "fp": 4681,
+            "tn": 4677905,
+            "fn": 2436
+          },
+          "0.01": {
+            "threshold": 0.110383041203022,
+            "precision": 0.09757750624503786,
+            "recall": 0.7848909657320873,
+            "f1": 0.17357606655069668,
+            "fpr": 0.009952193083052827,
+            "tp": 5039,
+            "fp": 46602,
+            "tn": 4635984,
+            "fn": 1381
+          }
+        }
+      },
+      "precision80": {
+        "threshold": 0.9808512926101685,
+        "samples": 4689006,
+        "positives": 6420,
+        "negatives": 4682586,
+        "alerts": 4334,
+        "tp": 3470,
+        "fp": 864,
+        "fn": 2950,
+        "tn": 4681722,
+        "precision": 0.8006460544531611,
+        "recall": 0.5404984423676013,
+        "fpr": 0.000184513429118013,
+        "f1": 0.6453412683652594
+      },
+      "non_ach_precision80": {
+        "threshold": 0.9808512926101685,
+        "samples": 4104569,
+        "positives": 715,
+        "negatives": 4103854,
+        "alerts": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 715,
+        "tn": 4103854,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "f1": 0.0
+      },
+      "qualification": {
+        "passed": false,
+        "precision": true,
+        "overall_recall": true,
+        "non_ach_recall": false
+      },
+      "groups": {
+        "payment_format": {
+          "ACH": {
+            "samples": 584437,
+            "positives": 5705,
+            "payer_accounts": 255079,
+            "receiver_accounts": 199520,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 584437,
+              "positives": 5705,
+              "negatives": 578732,
+              "alerts": 4334,
+              "tp": 3470,
+              "fp": 864,
+              "fn": 2235,
+              "tn": 577868,
+              "precision": 0.8006460544531611,
+              "recall": 0.6082383873794917,
+              "fpr": 0.001492919002232467,
+              "f1": 0.691303914732543
+            },
+            "detected_positive_accounts": {
+              "transactions": 3470,
+              "payer_accounts": 2501,
+              "receiver_accounts": 2432,
+              "either_accounts": 4377
+            },
+            "false_positive_accounts": {
+              "transactions": 864,
+              "payer_accounts": 850,
+              "receiver_accounts": 827,
+              "either_accounts": 1653
+            }
+          },
+          "Bitcoin": {
+            "samples": 103938,
+            "positives": 44,
+            "payer_accounts": 14313,
+            "receiver_accounts": 17921,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 103938,
+              "positives": 44,
+              "negatives": 103894,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 44,
+              "tn": 103894,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Cash": {
+            "samples": 495358,
+            "positives": 94,
+            "payer_accounts": 139617,
+            "receiver_accounts": 198372,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 495358,
+              "positives": 94,
+              "negatives": 495264,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 94,
+              "tn": 495264,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Cheque": {
+            "samples": 1920524,
+            "positives": 363,
+            "payer_accounts": 398993,
+            "receiver_accounts": 673836,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 1920524,
+              "positives": 363,
+              "negatives": 1920161,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 363,
+              "tn": 1920161,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Credit Card": {
+            "samples": 1409826,
+            "positives": 214,
+            "payer_accounts": 337402,
+            "receiver_accounts": 521299,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 1409826,
+              "positives": 214,
+              "negatives": 1409612,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 214,
+              "tn": 1409612,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Wire": {
+            "samples": 174923,
+            "positives": 0,
+            "payer_accounts": 67202,
+            "receiver_accounts": 72171,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 174923,
+              "positives": 0,
+              "negatives": 174923,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 174923,
+              "precision": null,
+              "recall": null,
+              "fpr": 0.0,
+              "f1": null
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          }
+        },
+        "ach_group": {
+          "ACH": {
+            "samples": 584437,
+            "positives": 5705,
+            "payer_accounts": 255079,
+            "receiver_accounts": 199520,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 584437,
+              "positives": 5705,
+              "negatives": 578732,
+              "alerts": 4334,
+              "tp": 3470,
+              "fp": 864,
+              "fn": 2235,
+              "tn": 577868,
+              "precision": 0.8006460544531611,
+              "recall": 0.6082383873794917,
+              "fpr": 0.001492919002232467,
+              "f1": 0.691303914732543
+            },
+            "detected_positive_accounts": {
+              "transactions": 3470,
+              "payer_accounts": 2501,
+              "receiver_accounts": 2432,
+              "either_accounts": 4377
+            },
+            "false_positive_accounts": {
+              "transactions": 864,
+              "payer_accounts": 850,
+              "receiver_accounts": 827,
+              "either_accounts": 1653
+            }
+          },
+          "non_ACH": {
+            "samples": 4104569,
+            "positives": 715,
+            "payer_accounts": 448281,
+            "receiver_accounts": 733502,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 4104569,
+              "positives": 715,
+              "negatives": 4103854,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 715,
+              "tn": 4103854,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          }
+        },
+        "payer_bank70": {
+          "bank70": {
+            "samples": 29,
+            "positives": 1,
+            "payer_accounts": 11,
+            "receiver_accounts": 13,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 29,
+              "positives": 1,
+              "negatives": 28,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "tn": 28,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "other": {
+            "samples": 4688977,
+            "positives": 6419,
+            "payer_accounts": 549649,
+            "receiver_accounts": 759185,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 4688977,
+              "positives": 6419,
+              "negatives": 4682558,
+              "alerts": 4334,
+              "tp": 3470,
+              "fp": 864,
+              "fn": 2949,
+              "tn": 4681694,
+              "precision": 0.8006460544531611,
+              "recall": 0.5405826452718492,
+              "fpr": 0.00018451453244145615,
+              "f1": 0.6454012833627825
+            },
+            "detected_positive_accounts": {
+              "transactions": 3470,
+              "payer_accounts": 2501,
+              "receiver_accounts": 2432,
+              "either_accounts": 4377
+            },
+            "false_positive_accounts": {
+              "transactions": 864,
+              "payer_accounts": 850,
+              "receiver_accounts": 827,
+              "either_accounts": 1653
+            }
+          }
+        },
+        "receiver_bank70": {
+          "bank70": {
+            "samples": 175,
+            "positives": 0,
+            "payer_accounts": 40,
+            "receiver_accounts": 27,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 175,
+              "positives": 0,
+              "negatives": 175,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 175,
+              "precision": null,
+              "recall": null,
+              "fpr": 0.0,
+              "f1": null
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "other": {
+            "samples": 4688831,
+            "positives": 6420,
+            "payer_accounts": 549649,
+            "receiver_accounts": 759161,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 4688831,
+              "positives": 6420,
+              "negatives": 4682411,
+              "alerts": 4334,
+              "tp": 3470,
+              "fp": 864,
+              "fn": 2950,
+              "tn": 4681547,
+              "precision": 0.8006460544531611,
+              "recall": 0.5404984423676013,
+              "fpr": 0.0001845203251060191,
+              "f1": 0.6453412683652594
+            },
+            "detected_positive_accounts": {
+              "transactions": 3470,
+              "payer_accounts": 2501,
+              "receiver_accounts": 2432,
+              "either_accounts": 4377
+            },
+            "false_positive_accounts": {
+              "transactions": 864,
+              "payer_accounts": 850,
+              "receiver_accounts": 827,
+              "either_accounts": 1653
+            }
+          }
+        },
+        "date": {
+          "2022-09-11": {
+            "samples": 830142,
+            "positives": 1966,
+            "payer_accounts": 303725,
+            "receiver_accounts": 382675,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 830142,
+              "positives": 1966,
+              "negatives": 828176,
+              "alerts": 1372,
+              "tp": 1125,
+              "fp": 247,
+              "fn": 841,
+              "tn": 827929,
+              "precision": 0.8199708454810496,
+              "recall": 0.5722278738555443,
+              "fpr": 0.00029824578350495546,
+              "f1": 0.6740563211503895
+            },
+            "detected_positive_accounts": {
+              "transactions": 1125,
+              "payer_accounts": 916,
+              "receiver_accounts": 914,
+              "either_accounts": 1705
+            },
+            "false_positive_accounts": {
+              "transactions": 247,
+              "payer_accounts": 245,
+              "receiver_accounts": 239,
+              "either_accounts": 481
+            }
+          },
+          "2022-09-12": {
+            "samples": 1930240,
+            "positives": 2179,
+            "payer_accounts": 482269,
+            "receiver_accounts": 727806,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 1930240,
+              "positives": 2179,
+              "negatives": 1928061,
+              "alerts": 1457,
+              "tp": 1141,
+              "fp": 316,
+              "fn": 1038,
+              "tn": 1927745,
+              "precision": 0.7831159917638985,
+              "recall": 0.5236346948141349,
+              "fpr": 0.00016389522945591453,
+              "f1": 0.6276127612761276
+            },
+            "detected_positive_accounts": {
+              "transactions": 1141,
+              "payer_accounts": 932,
+              "receiver_accounts": 930,
+              "either_accounts": 1731
+            },
+            "false_positive_accounts": {
+              "transactions": 316,
+              "payer_accounts": 315,
+              "receiver_accounts": 313,
+              "either_accounts": 624
+            }
+          },
+          "2022-09-13": {
+            "samples": 1928624,
+            "positives": 2275,
+            "payer_accounts": 480917,
+            "receiver_accounts": 727995,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 1928624,
+              "positives": 2275,
+              "negatives": 1926349,
+              "alerts": 1505,
+              "tp": 1204,
+              "fp": 301,
+              "fn": 1071,
+              "tn": 1926048,
+              "precision": 0.8,
+              "recall": 0.5292307692307693,
+              "fpr": 0.00015625413671146817,
+              "f1": 0.6370370370370371
+            },
+            "detected_positive_accounts": {
+              "transactions": 1204,
+              "payer_accounts": 986,
+              "receiver_accounts": 968,
+              "either_accounts": 1820
+            },
+            "false_positive_accounts": {
+              "transactions": 301,
+              "payer_accounts": 299,
+              "receiver_accounts": 291,
+              "either_accounts": 588
+            }
+          }
+        },
+        "payer_support_24h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 13,
+              "tn": 92024,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 660566,
+            "positives": 4144,
+            "payer_accounts": 476244,
+            "receiver_accounts": 377230,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 660566,
+              "positives": 4144,
+              "negatives": 656422,
+              "alerts": 2812,
+              "tp": 2364,
+              "fp": 448,
+              "fn": 1780,
+              "tn": 655974,
+              "precision": 0.8406827880512091,
+              "recall": 0.5704633204633205,
+              "fpr": 0.0006824877898668844,
+              "f1": 0.679700977573318
+            },
+            "detected_positive_accounts": {
+              "transactions": 2364,
+              "payer_accounts": 2117,
+              "receiver_accounts": 1770,
+              "either_accounts": 3542
+            },
+            "false_positive_accounts": {
+              "transactions": 448,
+              "payer_accounts": 447,
+              "receiver_accounts": 432,
+              "either_accounts": 868
+            }
+          },
+          "1-4": {
+            "samples": 1996033,
+            "positives": 1196,
+            "payer_accounts": 434294,
+            "receiver_accounts": 577349,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 1996033,
+              "positives": 1196,
+              "negatives": 1994837,
+              "alerts": 1088,
+              "tp": 796,
+              "fp": 292,
+              "fn": 400,
+              "tn": 1994545,
+              "precision": 0.7316176470588235,
+              "recall": 0.6655518394648829,
+              "fpr": 0.0001463778744829778,
+              "f1": 0.6970227670753065
+            },
+            "detected_positive_accounts": {
+              "transactions": 796,
+              "payer_accounts": 446,
+              "receiver_accounts": 645,
+              "either_accounts": 996
+            },
+            "false_positive_accounts": {
+              "transactions": 292,
+              "payer_accounts": 286,
+              "receiver_accounts": 284,
+              "either_accounts": 567
+            }
+          },
+          ">=5": {
+            "samples": 1940370,
+            "positives": 1067,
+            "payer_accounts": 176781,
+            "receiver_accounts": 481146,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 1940370,
+              "positives": 1067,
+              "negatives": 1939303,
+              "alerts": 434,
+              "tp": 310,
+              "fp": 124,
+              "fn": 757,
+              "tn": 1939179,
+              "precision": 0.7142857142857143,
+              "recall": 0.29053420805998126,
+              "fpr": 6.394049820992388e-05,
+              "f1": 0.41305796135909395
+            },
+            "detected_positive_accounts": {
+              "transactions": 310,
+              "payer_accounts": 203,
+              "receiver_accounts": 240,
+              "either_accounts": 418
+            },
+            "false_positive_accounts": {
+              "transactions": 124,
+              "payer_accounts": 123,
+              "receiver_accounts": 123,
+              "either_accounts": 246
+            }
+          }
+        },
+        "payer_support_72h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 13,
+              "tn": 92024,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 173134,
+            "positives": 3488,
+            "payer_accounts": 169559,
+            "receiver_accounts": 96232,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 173134,
+              "positives": 3488,
+              "negatives": 169646,
+              "alerts": 2358,
+              "tp": 2041,
+              "fp": 317,
+              "fn": 1447,
+              "tn": 169329,
+              "precision": 0.8655640373197625,
+              "recall": 0.5851490825688074,
+              "fpr": 0.0018685969607299907,
+              "f1": 0.698255217242559
+            },
+            "detected_positive_accounts": {
+              "transactions": 2041,
+              "payer_accounts": 1923,
+              "receiver_accounts": 1504,
+              "either_accounts": 3156
+            },
+            "false_positive_accounts": {
+              "transactions": 317,
+              "payer_accounts": 317,
+              "receiver_accounts": 304,
+              "either_accounts": 615
+            }
+          },
+          "1-4": {
+            "samples": 855574,
+            "positives": 1185,
+            "payer_accounts": 299206,
+            "receiver_accounts": 323821,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 855574,
+              "positives": 1185,
+              "negatives": 854389,
+              "alerts": 924,
+              "tp": 706,
+              "fp": 218,
+              "fn": 479,
+              "tn": 854171,
+              "precision": 0.7640692640692641,
+              "recall": 0.5957805907172996,
+              "fpr": 0.0002551530977107617,
+              "f1": 0.6695116168800379
+            },
+            "detected_positive_accounts": {
+              "transactions": 706,
+              "payer_accounts": 380,
+              "receiver_accounts": 646,
+              "either_accounts": 975
+            },
+            "false_positive_accounts": {
+              "transactions": 218,
+              "payer_accounts": 213,
+              "receiver_accounts": 210,
+              "either_accounts": 422
+            }
+          },
+          ">=5": {
+            "samples": 3568261,
+            "positives": 1734,
+            "payer_accounts": 299457,
+            "receiver_accounts": 641369,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 3568261,
+              "positives": 1734,
+              "negatives": 3566527,
+              "alerts": 1052,
+              "tp": 723,
+              "fp": 329,
+              "fn": 1011,
+              "tn": 3566198,
+              "precision": 0.6872623574144486,
+              "recall": 0.41695501730103807,
+              "fpr": 9.224660292772212e-05,
+              "f1": 0.5190236898779612
+            },
+            "detected_positive_accounts": {
+              "transactions": 723,
+              "payer_accounts": 416,
+              "receiver_accounts": 483,
+              "either_accounts": 817
+            },
+            "false_positive_accounts": {
+              "transactions": 329,
+              "payer_accounts": 322,
+              "receiver_accounts": 322,
+              "either_accounts": 643
+            }
+          }
+        },
+        "payer_support_7d": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 13,
+              "tn": 92024,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 81908,
+            "positives": 3121,
+            "payer_accounts": 81355,
+            "receiver_accounts": 24247,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 81908,
+              "positives": 3121,
+              "negatives": 78787,
+              "alerts": 2191,
+              "tp": 1946,
+              "fp": 245,
+              "fn": 1175,
+              "tn": 78542,
+              "precision": 0.8881789137380192,
+              "recall": 0.6235181031720602,
+              "fpr": 0.0031096500691738483,
+              "f1": 0.7326807228915663
+            },
+            "detected_positive_accounts": {
+              "transactions": 1946,
+              "payer_accounts": 1840,
+              "receiver_accounts": 1440,
+              "either_accounts": 3026
+            },
+            "false_positive_accounts": {
+              "transactions": 245,
+              "payer_accounts": 245,
+              "receiver_accounts": 232,
+              "either_accounts": 472
+            }
+          },
+          "1-4": {
+            "samples": 52091,
+            "positives": 1062,
+            "payer_accounts": 44591,
+            "receiver_accounts": 22950,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 52091,
+              "positives": 1062,
+              "negatives": 51029,
+              "alerts": 677,
+              "tp": 551,
+              "fp": 126,
+              "fn": 511,
+              "tn": 50903,
+              "precision": 0.8138847858197932,
+              "recall": 0.5188323917137476,
+              "fpr": 0.002469184189382508,
+              "f1": 0.6336975273145485
+            },
+            "detected_positive_accounts": {
+              "transactions": 551,
+              "payer_accounts": 306,
+              "receiver_accounts": 532,
+              "either_accounts": 822
+            },
+            "false_positive_accounts": {
+              "transactions": 126,
+              "payer_accounts": 123,
+              "receiver_accounts": 121,
+              "either_accounts": 244
+            }
+          },
+          ">=5": {
+            "samples": 4462970,
+            "positives": 2224,
+            "payer_accounts": 440629,
+            "receiver_accounts": 736065,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 4462970,
+              "positives": 2224,
+              "negatives": 4460746,
+              "alerts": 1466,
+              "tp": 973,
+              "fp": 493,
+              "fn": 1251,
+              "tn": 4460253,
+              "precision": 0.6637107776261937,
+              "recall": 0.4375,
+              "fpr": 0.0001105196305730028,
+              "f1": 0.5273712737127372
+            },
+            "detected_positive_accounts": {
+              "transactions": 973,
+              "payer_accounts": 561,
+              "receiver_accounts": 628,
+              "either_accounts": 1055
+            },
+            "false_positive_accounts": {
+              "transactions": 493,
+              "payer_accounts": 483,
+              "receiver_accounts": 480,
+              "either_accounts": 958
+            }
+          }
+        },
+        "receiver_support_24h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 13,
+              "tn": 92024,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 1048048,
+            "positives": 2729,
+            "payer_accounts": 403019,
+            "receiver_accounts": 711139,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 1048048,
+              "positives": 2729,
+              "negatives": 1045319,
+              "alerts": 2055,
+              "tp": 1563,
+              "fp": 492,
+              "fn": 1166,
+              "tn": 1044827,
+              "precision": 0.7605839416058394,
+              "recall": 0.572737266397948,
+              "fpr": 0.00047066971900443786,
+              "f1": 0.6534280936454849
+            },
+            "detected_positive_accounts": {
+              "transactions": 1563,
+              "payer_accounts": 1183,
+              "receiver_accounts": 1531,
+              "either_accounts": 2525
+            },
+            "false_positive_accounts": {
+              "transactions": 492,
+              "payer_accounts": 490,
+              "receiver_accounts": 487,
+              "either_accounts": 965
+            }
+          },
+          "1-4": {
+            "samples": 2960448,
+            "positives": 2954,
+            "payer_accounts": 471615,
+            "receiver_accounts": 694188,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 2960448,
+              "positives": 2954,
+              "negatives": 2957494,
+              "alerts": 1849,
+              "tp": 1531,
+              "fp": 318,
+              "fn": 1423,
+              "tn": 2957176,
+              "precision": 0.8280151433207139,
+              "recall": 0.5182802979011509,
+              "fpr": 0.00010752346412198976,
+              "f1": 0.6375182177805538
+            },
+            "detected_positive_accounts": {
+              "transactions": 1531,
+              "payer_accounts": 1229,
+              "receiver_accounts": 968,
+              "either_accounts": 2038
+            },
+            "false_positive_accounts": {
+              "transactions": 318,
+              "payer_accounts": 314,
+              "receiver_accounts": 305,
+              "either_accounts": 618
+            }
+          },
+          ">=5": {
+            "samples": 588473,
+            "positives": 724,
+            "payer_accounts": 225978,
+            "receiver_accounts": 183540,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 588473,
+              "positives": 724,
+              "negatives": 587749,
+              "alerts": 430,
+              "tp": 376,
+              "fp": 54,
+              "fn": 348,
+              "tn": 587695,
+              "precision": 0.8744186046511628,
+              "recall": 0.5193370165745856,
+              "fpr": 9.187595385104867e-05,
+              "f1": 0.6516464471403813
+            },
+            "detected_positive_accounts": {
+              "transactions": 376,
+              "payer_accounts": 339,
+              "receiver_accounts": 185,
+              "either_accounts": 504
+            },
+            "false_positive_accounts": {
+              "transactions": 54,
+              "payer_accounts": 52,
+              "receiver_accounts": 48,
+              "either_accounts": 100
+            }
+          }
+        },
+        "receiver_support_72h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 13,
+              "tn": 92024,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 161206,
+            "positives": 1543,
+            "payer_accounts": 125600,
+            "receiver_accounts": 155755,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 161206,
+              "positives": 1543,
+              "negatives": 159663,
+              "alerts": 1191,
+              "tp": 897,
+              "fp": 294,
+              "fn": 646,
+              "tn": 159369,
+              "precision": 0.7531486146095718,
+              "recall": 0.5813350615683733,
+              "fpr": 0.0018413784032618704,
+              "f1": 0.6561814191660571
+            },
+            "detected_positive_accounts": {
+              "transactions": 897,
+              "payer_accounts": 707,
+              "receiver_accounts": 897,
+              "either_accounts": 1548
+            },
+            "false_positive_accounts": {
+              "transactions": 294,
+              "payer_accounts": 294,
+              "receiver_accounts": 294,
+              "either_accounts": 586
+            }
+          },
+          "1-4": {
+            "samples": 1572134,
+            "positives": 2167,
+            "payer_accounts": 384539,
+            "receiver_accounts": 552181,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 1572134,
+              "positives": 2167,
+              "negatives": 1569967,
+              "alerts": 1348,
+              "tp": 1013,
+              "fp": 335,
+              "fn": 1154,
+              "tn": 1569632,
+              "precision": 0.7514836795252225,
+              "recall": 0.46746654360867557,
+              "fpr": 0.00021338028124158023,
+              "f1": 0.5763869132290185
+            },
+            "detected_positive_accounts": {
+              "transactions": 1013,
+              "payer_accounts": 872,
+              "receiver_accounts": 814,
+              "either_accounts": 1601
+            },
+            "false_positive_accounts": {
+              "transactions": 335,
+              "payer_accounts": 329,
+              "receiver_accounts": 324,
+              "either_accounts": 650
+            }
+          },
+          ">=5": {
+            "samples": 2863629,
+            "positives": 2697,
+            "payer_accounts": 422759,
+            "receiver_accounts": 463442,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 2863629,
+              "positives": 2697,
+              "negatives": 2860932,
+              "alerts": 1795,
+              "tp": 1560,
+              "fp": 235,
+              "fn": 1137,
+              "tn": 2860697,
+              "precision": 0.8690807799442897,
+              "recall": 0.578420467185762,
+              "fpr": 8.214106452023327e-05,
+              "f1": 0.6945681211041852
+            },
+            "detected_positive_accounts": {
+              "transactions": 1560,
+              "payer_accounts": 1213,
+              "receiver_accounts": 854,
+              "either_accounts": 1922
+            },
+            "false_positive_accounts": {
+              "transactions": 235,
+              "payer_accounts": 231,
+              "receiver_accounts": 214,
+              "either_accounts": 443
+            }
+          }
+        },
+        "receiver_support_7d": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 13,
+              "tn": 92024,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "0": {
+            "samples": 25771,
+            "positives": 1096,
+            "payer_accounts": 24231,
+            "receiver_accounts": 24490,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 25771,
+              "positives": 1096,
+              "negatives": 24675,
+              "alerts": 869,
+              "tp": 670,
+              "fp": 199,
+              "fn": 426,
+              "tn": 24476,
+              "precision": 0.7710011507479861,
+              "recall": 0.6113138686131386,
+              "fpr": 0.008064842958459979,
+              "f1": 0.6819338422391857
+            },
+            "detected_positive_accounts": {
+              "transactions": 670,
+              "payer_accounts": 539,
+              "receiver_accounts": 670,
+              "either_accounts": 1176
+            },
+            "false_positive_accounts": {
+              "transactions": 199,
+              "payer_accounts": 199,
+              "receiver_accounts": 199,
+              "either_accounts": 397
+            }
+          },
+          "1-4": {
+            "samples": 80926,
+            "positives": 1264,
+            "payer_accounts": 66040,
+            "receiver_accounts": 49779,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 80926,
+              "positives": 1264,
+              "negatives": 79662,
+              "alerts": 793,
+              "tp": 577,
+              "fp": 216,
+              "fn": 687,
+              "tn": 79446,
+              "precision": 0.7276166456494325,
+              "recall": 0.4564873417721519,
+              "fpr": 0.002711455901182496,
+              "f1": 0.561011181332037
+            },
+            "detected_positive_accounts": {
+              "transactions": 577,
+              "payer_accounts": 534,
+              "receiver_accounts": 460,
+              "either_accounts": 981
+            },
+            "false_positive_accounts": {
+              "transactions": 216,
+              "payer_accounts": 212,
+              "receiver_accounts": 207,
+              "either_accounts": 418
+            }
+          },
+          ">=5": {
+            "samples": 4490272,
+            "positives": 4047,
+            "payer_accounts": 509210,
+            "receiver_accounts": 704809,
+            "operating_point": {
+              "threshold": 0.9808512926101685,
+              "samples": 4490272,
+              "positives": 4047,
+              "negatives": 4486225,
+              "alerts": 2672,
+              "tp": 2223,
+              "fp": 449,
+              "fn": 1824,
+              "tn": 4485776,
+              "precision": 0.8319610778443114,
+              "recall": 0.5492957746478874,
+              "fpr": 0.00010008414647058495,
+              "f1": 0.661705610954011
+            },
+            "detected_positive_accounts": {
+              "transactions": 2223,
+              "payer_accounts": 1669,
+              "receiver_accounts": 1373,
+              "either_accounts": 2777
+            },
+            "false_positive_accounts": {
+              "transactions": 449,
+              "payer_accounts": 442,
+              "receiver_accounts": 425,
+              "either_accounts": 864
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "features_balanced",
+      "model_path": "result\\gnn_tuning_v2\\trials\\features_balanced\\final_model.pt",
+      "model_sha256": "83e78126d9999b9f08e9bdedbc759e614bff0efa02936874269844048378870f",
+      "training_config_sha256": "cfdb9984a57c2848de273de60f57d10a2783571e955e3cdf1ab487da9a4ebc08",
+      "training_result_sha256": "37bb23d38fb0ec7f9106c80cc1bb5e68dc0227c576784ac8556f87c2fe8c1b47",
+      "evaluation_config_sha256": "997339a6ac3e2fe059096b4ee70eaa9ef4f26bbb94c0d4205ec8a03c42455982",
+      "metrics_sha256": "56d287619035601a281026b99b45a652e0373e47b2b65dd740069b2376bea9fa",
+      "metrics": {
+        "samples": 4689006,
+        "positives": 6420,
+        "negatives": 4682586,
+        "positive_rate": 0.0013691601162378552,
+        "average_precision": 0.6076883782009502,
+        "pr_auc_definition": "average_precision (step integral)",
+        "roc_auc": 0.9801152582863414,
+        "threshold_0_5": {
+          "threshold": 0.5,
+          "precision": 0.11835317702857981,
+          "recall": 0.7540498442367601,
+          "f1": 0.2045939606533821,
+          "fpr": 0.007701300093580769,
+          "tp": 4841,
+          "fp": 36062,
+          "tn": 4646524,
+          "fn": 1579
+        },
+        "best_f1": {
+          "threshold": 0.9896711707115173,
+          "precision": 0.8193003618817852,
+          "recall": 0.5289719626168224,
+          "f1": 0.6428774254614292,
+          "fpr": 0.00015995435001087005,
+          "tp": 3396,
+          "fp": 749,
+          "tn": 4681837,
+          "fn": 3024
+        },
+        "recall_at_fpr": {
+          "0.001": {
+            "threshold": 0.921623706817627,
+            "precision": 0.45969976905311777,
+            "recall": 0.6200934579439252,
+            "f1": 0.5279840848806366,
+            "fpr": 0.0009992341838462764,
+            "tp": 3981,
+            "fp": 4679,
+            "tn": 4677907,
+            "fn": 2439
+          },
+          "0.01": {
+            "threshold": 0.27321621775627136,
+            "precision": 0.0966148145288918,
+            "recall": 0.7797507788161994,
+            "f1": 0.1719270529244084,
+            "fpr": 0.009996185868236055,
+            "tp": 5006,
+            "fp": 46808,
+            "tn": 4635778,
+            "fn": 1414
+          }
+        }
+      },
+      "precision80": {
+        "threshold": 0.9872702360153198,
+        "samples": 4689006,
+        "positives": 6420,
+        "negatives": 4682586,
+        "alerts": 4297,
+        "tp": 3438,
+        "fp": 859,
+        "fn": 2982,
+        "tn": 4681727,
+        "precision": 0.8000930882010705,
+        "recall": 0.5355140186915888,
+        "fpr": 0.00018344564306987634,
+        "f1": 0.6415974619762993
+      },
+      "non_ach_precision80": {
+        "threshold": 0.9872702360153198,
+        "samples": 4104569,
+        "positives": 715,
+        "negatives": 4103854,
+        "alerts": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 715,
+        "tn": 4103854,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "f1": 0.0
+      },
+      "qualification": {
+        "passed": false,
+        "precision": true,
+        "overall_recall": false,
+        "non_ach_recall": false
+      },
+      "groups": {
+        "payment_format": {
+          "ACH": {
+            "samples": 584437,
+            "positives": 5705,
+            "payer_accounts": 255079,
+            "receiver_accounts": 199520,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 584437,
+              "positives": 5705,
+              "negatives": 578732,
+              "alerts": 4297,
+              "tp": 3438,
+              "fp": 859,
+              "fn": 2267,
+              "tn": 577873,
+              "precision": 0.8000930882010705,
+              "recall": 0.6026292725679229,
+              "fpr": 0.0014842794246732512,
+              "f1": 0.6874625074985004
+            },
+            "detected_positive_accounts": {
+              "transactions": 3438,
+              "payer_accounts": 2473,
+              "receiver_accounts": 2424,
+              "either_accounts": 4346
+            },
+            "false_positive_accounts": {
+              "transactions": 859,
+              "payer_accounts": 851,
+              "receiver_accounts": 828,
+              "either_accounts": 1661
+            }
+          },
+          "Bitcoin": {
+            "samples": 103938,
+            "positives": 44,
+            "payer_accounts": 14313,
+            "receiver_accounts": 17921,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 103938,
+              "positives": 44,
+              "negatives": 103894,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 44,
+              "tn": 103894,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Cash": {
+            "samples": 495358,
+            "positives": 94,
+            "payer_accounts": 139617,
+            "receiver_accounts": 198372,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 495358,
+              "positives": 94,
+              "negatives": 495264,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 94,
+              "tn": 495264,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Cheque": {
+            "samples": 1920524,
+            "positives": 363,
+            "payer_accounts": 398993,
+            "receiver_accounts": 673836,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 1920524,
+              "positives": 363,
+              "negatives": 1920161,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 363,
+              "tn": 1920161,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Credit Card": {
+            "samples": 1409826,
+            "positives": 214,
+            "payer_accounts": 337402,
+            "receiver_accounts": 521299,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 1409826,
+              "positives": 214,
+              "negatives": 1409612,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 214,
+              "tn": 1409612,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "Wire": {
+            "samples": 174923,
+            "positives": 0,
+            "payer_accounts": 67202,
+            "receiver_accounts": 72171,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 174923,
+              "positives": 0,
+              "negatives": 174923,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 174923,
+              "precision": null,
+              "recall": null,
+              "fpr": 0.0,
+              "f1": null
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          }
+        },
+        "ach_group": {
+          "ACH": {
+            "samples": 584437,
+            "positives": 5705,
+            "payer_accounts": 255079,
+            "receiver_accounts": 199520,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 584437,
+              "positives": 5705,
+              "negatives": 578732,
+              "alerts": 4297,
+              "tp": 3438,
+              "fp": 859,
+              "fn": 2267,
+              "tn": 577873,
+              "precision": 0.8000930882010705,
+              "recall": 0.6026292725679229,
+              "fpr": 0.0014842794246732512,
+              "f1": 0.6874625074985004
+            },
+            "detected_positive_accounts": {
+              "transactions": 3438,
+              "payer_accounts": 2473,
+              "receiver_accounts": 2424,
+              "either_accounts": 4346
+            },
+            "false_positive_accounts": {
+              "transactions": 859,
+              "payer_accounts": 851,
+              "receiver_accounts": 828,
+              "either_accounts": 1661
+            }
+          },
+          "non_ACH": {
+            "samples": 4104569,
+            "positives": 715,
+            "payer_accounts": 448281,
+            "receiver_accounts": 733502,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 4104569,
+              "positives": 715,
+              "negatives": 4103854,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 715,
+              "tn": 4103854,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          }
+        },
+        "payer_bank70": {
+          "bank70": {
+            "samples": 29,
+            "positives": 1,
+            "payer_accounts": 11,
+            "receiver_accounts": 13,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 29,
+              "positives": 1,
+              "negatives": 28,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "tn": 28,
+              "precision": null,
+              "recall": 0.0,
+              "fpr": 0.0,
+              "f1": 0.0
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "other": {
+            "samples": 4688977,
+            "positives": 6419,
+            "payer_accounts": 549649,
+            "receiver_accounts": 759185,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 4688977,
+              "positives": 6419,
+              "negatives": 4682558,
+              "alerts": 4297,
+              "tp": 3438,
+              "fp": 859,
+              "fn": 2981,
+              "tn": 4681699,
+              "precision": 0.8000930882010705,
+              "recall": 0.5355974450849041,
+              "fpr": 0.00018344674000834587,
+              "f1": 0.6416573348264277
+            },
+            "detected_positive_accounts": {
+              "transactions": 3438,
+              "payer_accounts": 2473,
+              "receiver_accounts": 2424,
+              "either_accounts": 4346
+            },
+            "false_positive_accounts": {
+              "transactions": 859,
+              "payer_accounts": 851,
+              "receiver_accounts": 828,
+              "either_accounts": 1661
+            }
+          }
+        },
+        "receiver_bank70": {
+          "bank70": {
+            "samples": 175,
+            "positives": 0,
+            "payer_accounts": 40,
+            "receiver_accounts": 27,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 175,
+              "positives": 0,
+              "negatives": 175,
+              "alerts": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 175,
+              "precision": null,
+              "recall": null,
+              "fpr": 0.0,
+              "f1": null
+            },
+            "detected_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            },
+            "false_positive_accounts": {
+              "transactions": 0,
+              "payer_accounts": 0,
+              "receiver_accounts": 0,
+              "either_accounts": 0
+            }
+          },
+          "other": {
+            "samples": 4688831,
+            "positives": 6420,
+            "payer_accounts": 549649,
+            "receiver_accounts": 759161,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 4688831,
+              "positives": 6420,
+              "negatives": 4682411,
+              "alerts": 4297,
+              "tp": 3438,
+              "fp": 859,
+              "fn": 2982,
+              "tn": 4681552,
+              "precision": 0.8000930882010705,
+              "recall": 0.5355140186915888,
+              "fpr": 0.00018345249915054446,
+              "f1": 0.6415974619762993
+            },
+            "detected_positive_accounts": {
+              "transactions": 3438,
+              "payer_accounts": 2473,
+              "receiver_accounts": 2424,
+              "either_accounts": 4346
+            },
+            "false_positive_accounts": {
+              "transactions": 859,
+              "payer_accounts": 851,
+              "receiver_accounts": 828,
+              "either_accounts": 1661
+            }
+          }
+        },
+        "date": {
+          "2022-09-11": {
+            "samples": 830142,
+            "positives": 1966,
+            "payer_accounts": 303725,
+            "receiver_accounts": 382675,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 830142,
+              "positives": 1966,
+              "negatives": 828176,
+              "alerts": 1340,
+              "tp": 1115,
+              "fp": 225,
+              "fn": 851,
+              "tn": 827951,
+              "precision": 0.832089552238806,
+              "recall": 0.5671414038657172,
+              "fpr": 0.0002716813817352833,
+              "f1": 0.6745311554748942
+            },
+            "detected_positive_accounts": {
+              "transactions": 1115,
+              "payer_accounts": 911,
+              "receiver_accounts": 906,
+              "either_accounts": 1693
+            },
+            "false_positive_accounts": {
+              "transactions": 225,
+              "payer_accounts": 224,
+              "receiver_accounts": 217,
+              "either_accounts": 437
+            }
+          },
+          "2022-09-12": {
+            "samples": 1930240,
+            "positives": 2179,
+            "payer_accounts": 482269,
+            "receiver_accounts": 727806,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 1930240,
+              "positives": 2179,
+              "negatives": 1928061,
+              "alerts": 1508,
+              "tp": 1130,
+              "fp": 378,
+              "fn": 1049,
+              "tn": 1927683,
+              "precision": 0.7493368700265252,
+              "recall": 0.5185865075722809,
+              "fpr": 0.00019605188839979647,
+              "f1": 0.6129644697586113
+            },
+            "detected_positive_accounts": {
+              "transactions": 1130,
+              "payer_accounts": 921,
+              "receiver_accounts": 928,
+              "either_accounts": 1721
+            },
+            "false_positive_accounts": {
+              "transactions": 378,
+              "payer_accounts": 378,
+              "receiver_accounts": 376,
+              "either_accounts": 750
+            }
+          },
+          "2022-09-13": {
+            "samples": 1928624,
+            "positives": 2275,
+            "payer_accounts": 480917,
+            "receiver_accounts": 727995,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 1928624,
+              "positives": 2275,
+              "negatives": 1926349,
+              "alerts": 1449,
+              "tp": 1193,
+              "fp": 256,
+              "fn": 1082,
+              "tn": 1926093,
+              "precision": 0.8233264320220842,
+              "recall": 0.5243956043956044,
+              "fpr": 0.00013289388371473705,
+              "f1": 0.6407089151450054
+            },
+            "detected_positive_accounts": {
+              "transactions": 1193,
+              "payer_accounts": 970,
+              "receiver_accounts": 962,
+              "either_accounts": 1804
+            },
+            "false_positive_accounts": {
+              "transactions": 256,
+              "payer_accounts": 254,
+              "receiver_accounts": 247,
+              "either_accounts": 498
+            }
+          }
+        },
+        "payer_support_24h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 2,
+              "fp": 2,
+              "fn": 11,
+              "tn": 92022,
+              "precision": 0.5,
+              "recall": 0.15384615384615385,
+              "fpr": 2.1733460836303573e-05,
+              "f1": 0.23529411764705882
+            },
+            "detected_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            },
+            "false_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            }
+          },
+          "0": {
+            "samples": 660566,
+            "positives": 4144,
+            "payer_accounts": 476244,
+            "receiver_accounts": 377230,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 660566,
+              "positives": 4144,
+              "negatives": 656422,
+              "alerts": 2757,
+              "tp": 2330,
+              "fp": 427,
+              "fn": 1814,
+              "tn": 655995,
+              "precision": 0.8451215088864708,
+              "recall": 0.5622586872586872,
+              "fpr": 0.0006504961747168742,
+              "f1": 0.6752644544268946
+            },
+            "detected_positive_accounts": {
+              "transactions": 2330,
+              "payer_accounts": 2090,
+              "receiver_accounts": 1762,
+              "either_accounts": 3509
+            },
+            "false_positive_accounts": {
+              "transactions": 427,
+              "payer_accounts": 426,
+              "receiver_accounts": 412,
+              "either_accounts": 832
+            }
+          },
+          "1-4": {
+            "samples": 1996033,
+            "positives": 1196,
+            "payer_accounts": 434294,
+            "receiver_accounts": 577349,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 1996033,
+              "positives": 1196,
+              "negatives": 1994837,
+              "alerts": 1060,
+              "tp": 787,
+              "fp": 273,
+              "fn": 409,
+              "tn": 1994564,
+              "precision": 0.7424528301886792,
+              "recall": 0.6580267558528428,
+              "fpr": 0.00013685328675977035,
+              "f1": 0.6976950354609929
+            },
+            "detected_positive_accounts": {
+              "transactions": 787,
+              "payer_accounts": 443,
+              "receiver_accounts": 642,
+              "either_accounts": 990
+            },
+            "false_positive_accounts": {
+              "transactions": 273,
+              "payer_accounts": 269,
+              "receiver_accounts": 266,
+              "either_accounts": 532
+            }
+          },
+          ">=5": {
+            "samples": 1940370,
+            "positives": 1067,
+            "payer_accounts": 176781,
+            "receiver_accounts": 481146,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 1940370,
+              "positives": 1067,
+              "negatives": 1939303,
+              "alerts": 476,
+              "tp": 319,
+              "fp": 157,
+              "fn": 748,
+              "tn": 1939146,
+              "precision": 0.6701680672268907,
+              "recall": 0.29896907216494845,
+              "fpr": 8.095692112062943e-05,
+              "f1": 0.4134802333117304
+            },
+            "detected_positive_accounts": {
+              "transactions": 319,
+              "payer_accounts": 203,
+              "receiver_accounts": 245,
+              "either_accounts": 423
+            },
+            "false_positive_accounts": {
+              "transactions": 157,
+              "payer_accounts": 157,
+              "receiver_accounts": 156,
+              "either_accounts": 313
+            }
+          }
+        },
+        "payer_support_72h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 2,
+              "fp": 2,
+              "fn": 11,
+              "tn": 92022,
+              "precision": 0.5,
+              "recall": 0.15384615384615385,
+              "fpr": 2.1733460836303573e-05,
+              "f1": 0.23529411764705882
+            },
+            "detected_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            },
+            "false_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            }
+          },
+          "0": {
+            "samples": 173134,
+            "positives": 3488,
+            "payer_accounts": 169559,
+            "receiver_accounts": 96232,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 173134,
+              "positives": 3488,
+              "negatives": 169646,
+              "alerts": 2323,
+              "tp": 2013,
+              "fp": 310,
+              "fn": 1475,
+              "tn": 169336,
+              "precision": 0.8665518725785623,
+              "recall": 0.5771215596330275,
+              "fpr": 0.0018273345672753852,
+              "f1": 0.692823954568921
+            },
+            "detected_positive_accounts": {
+              "transactions": 2013,
+              "payer_accounts": 1895,
+              "receiver_accounts": 1497,
+              "either_accounts": 3124
+            },
+            "false_positive_accounts": {
+              "transactions": 310,
+              "payer_accounts": 310,
+              "receiver_accounts": 300,
+              "either_accounts": 605
+            }
+          },
+          "1-4": {
+            "samples": 855574,
+            "positives": 1185,
+            "payer_accounts": 299206,
+            "receiver_accounts": 323821,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 855574,
+              "positives": 1185,
+              "negatives": 854389,
+              "alerts": 866,
+              "tp": 689,
+              "fp": 177,
+              "fn": 496,
+              "tn": 854212,
+              "precision": 0.7956120092378753,
+              "recall": 0.5814345991561182,
+              "fpr": 0.00020716558850827901,
+              "f1": 0.6718673817649927
+            },
+            "detected_positive_accounts": {
+              "transactions": 689,
+              "payer_accounts": 371,
+              "receiver_accounts": 632,
+              "either_accounts": 957
+            },
+            "false_positive_accounts": {
+              "transactions": 177,
+              "payer_accounts": 176,
+              "receiver_accounts": 172,
+              "either_accounts": 348
+            }
+          },
+          ">=5": {
+            "samples": 3568261,
+            "positives": 1734,
+            "payer_accounts": 299457,
+            "receiver_accounts": 641369,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 3568261,
+              "positives": 1734,
+              "negatives": 3566527,
+              "alerts": 1104,
+              "tp": 734,
+              "fp": 370,
+              "fn": 1000,
+              "tn": 3566157,
+              "precision": 0.6648550724637681,
+              "recall": 0.4232987312572088,
+              "fpr": 0.00010374238019227108,
+              "f1": 0.5172656800563777
+            },
+            "detected_positive_accounts": {
+              "transactions": 734,
+              "payer_accounts": 419,
+              "receiver_accounts": 491,
+              "either_accounts": 826
+            },
+            "false_positive_accounts": {
+              "transactions": 370,
+              "payer_accounts": 365,
+              "receiver_accounts": 363,
+              "either_accounts": 725
+            }
+          }
+        },
+        "payer_support_7d": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 2,
+              "fp": 2,
+              "fn": 11,
+              "tn": 92022,
+              "precision": 0.5,
+              "recall": 0.15384615384615385,
+              "fpr": 2.1733460836303573e-05,
+              "f1": 0.23529411764705882
+            },
+            "detected_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            },
+            "false_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            }
+          },
+          "0": {
+            "samples": 81908,
+            "positives": 3121,
+            "payer_accounts": 81355,
+            "receiver_accounts": 24247,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 81908,
+              "positives": 3121,
+              "negatives": 78787,
+              "alerts": 2166,
+              "tp": 1932,
+              "fp": 234,
+              "fn": 1189,
+              "tn": 78553,
+              "precision": 0.8919667590027701,
+              "recall": 0.619032361422621,
+              "fpr": 0.0029700331272925736,
+              "f1": 0.7308492528844335
+            },
+            "detected_positive_accounts": {
+              "transactions": 1932,
+              "payer_accounts": 1826,
+              "receiver_accounts": 1442,
+              "either_accounts": 3013
+            },
+            "false_positive_accounts": {
+              "transactions": 234,
+              "payer_accounts": 234,
+              "receiver_accounts": 224,
+              "either_accounts": 454
+            }
+          },
+          "1-4": {
+            "samples": 52091,
+            "positives": 1062,
+            "payer_accounts": 44591,
+            "receiver_accounts": 22950,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 52091,
+              "positives": 1062,
+              "negatives": 51029,
+              "alerts": 601,
+              "tp": 527,
+              "fp": 74,
+              "fn": 535,
+              "tn": 50955,
+              "precision": 0.8768718801996672,
+              "recall": 0.4962335216572505,
+              "fpr": 0.0014501557937643302,
+              "f1": 0.6337943475646423
+            },
+            "detected_positive_accounts": {
+              "transactions": 527,
+              "payer_accounts": 290,
+              "receiver_accounts": 510,
+              "either_accounts": 786
+            },
+            "false_positive_accounts": {
+              "transactions": 74,
+              "payer_accounts": 74,
+              "receiver_accounts": 71,
+              "either_accounts": 145
+            }
+          },
+          ">=5": {
+            "samples": 4462970,
+            "positives": 2224,
+            "payer_accounts": 440629,
+            "receiver_accounts": 736065,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 4462970,
+              "positives": 2224,
+              "negatives": 4460746,
+              "alerts": 1526,
+              "tp": 977,
+              "fp": 549,
+              "fn": 1247,
+              "tn": 4460197,
+              "precision": 0.6402359108781127,
+              "recall": 0.4392985611510791,
+              "fpr": 0.00012307358455289764,
+              "f1": 0.5210666666666667
+            },
+            "detected_positive_accounts": {
+              "transactions": 977,
+              "payer_accounts": 561,
+              "receiver_accounts": 634,
+              "either_accounts": 1056
+            },
+            "false_positive_accounts": {
+              "transactions": 549,
+              "payer_accounts": 542,
+              "receiver_accounts": 537,
+              "either_accounts": 1075
+            }
+          }
+        },
+        "receiver_support_24h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 2,
+              "fp": 2,
+              "fn": 11,
+              "tn": 92022,
+              "precision": 0.5,
+              "recall": 0.15384615384615385,
+              "fpr": 2.1733460836303573e-05,
+              "f1": 0.23529411764705882
+            },
+            "detected_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            },
+            "false_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            }
+          },
+          "0": {
+            "samples": 1048048,
+            "positives": 2729,
+            "payer_accounts": 403019,
+            "receiver_accounts": 711139,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 1048048,
+              "positives": 2729,
+              "negatives": 1045319,
+              "alerts": 2037,
+              "tp": 1546,
+              "fp": 491,
+              "fn": 1183,
+              "tn": 1044828,
+              "precision": 0.7589592538046146,
+              "recall": 0.5665078783437156,
+              "fpr": 0.00046971307323410364,
+              "f1": 0.648762064624423
+            },
+            "detected_positive_accounts": {
+              "transactions": 1546,
+              "payer_accounts": 1172,
+              "receiver_accounts": 1517,
+              "either_accounts": 2510
+            },
+            "false_positive_accounts": {
+              "transactions": 491,
+              "payer_accounts": 490,
+              "receiver_accounts": 487,
+              "either_accounts": 970
+            }
+          },
+          "1-4": {
+            "samples": 2960448,
+            "positives": 2954,
+            "payer_accounts": 471615,
+            "receiver_accounts": 694188,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 2960448,
+              "positives": 2954,
+              "negatives": 2957494,
+              "alerts": 1822,
+              "tp": 1513,
+              "fp": 309,
+              "fn": 1441,
+              "tn": 2957185,
+              "precision": 0.8304061470911087,
+              "recall": 0.512186865267434,
+              "fpr": 0.00010448034721287685,
+              "f1": 0.6335845896147404
+            },
+            "detected_positive_accounts": {
+              "transactions": 1513,
+              "payer_accounts": 1210,
+              "receiver_accounts": 969,
+              "either_accounts": 2025
+            },
+            "false_positive_accounts": {
+              "transactions": 309,
+              "payer_accounts": 306,
+              "receiver_accounts": 298,
+              "either_accounts": 603
+            }
+          },
+          ">=5": {
+            "samples": 588473,
+            "positives": 724,
+            "payer_accounts": 225978,
+            "receiver_accounts": 183540,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 588473,
+              "positives": 724,
+              "negatives": 587749,
+              "alerts": 434,
+              "tp": 377,
+              "fp": 57,
+              "fn": 347,
+              "tn": 587692,
+              "precision": 0.868663594470046,
+              "recall": 0.5207182320441989,
+              "fpr": 9.698017350944025e-05,
+              "f1": 0.6511226252158895
+            },
+            "detected_positive_accounts": {
+              "transactions": 377,
+              "payer_accounts": 340,
+              "receiver_accounts": 185,
+              "either_accounts": 505
+            },
+            "false_positive_accounts": {
+              "transactions": 57,
+              "payer_accounts": 55,
+              "receiver_accounts": 51,
+              "either_accounts": 106
+            }
+          }
+        },
+        "receiver_support_72h": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 2,
+              "fp": 2,
+              "fn": 11,
+              "tn": 92022,
+              "precision": 0.5,
+              "recall": 0.15384615384615385,
+              "fpr": 2.1733460836303573e-05,
+              "f1": 0.23529411764705882
+            },
+            "detected_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            },
+            "false_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            }
+          },
+          "0": {
+            "samples": 161206,
+            "positives": 1543,
+            "payer_accounts": 125600,
+            "receiver_accounts": 155755,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 161206,
+              "positives": 1543,
+              "negatives": 159663,
+              "alerts": 1175,
+              "tp": 885,
+              "fp": 290,
+              "fn": 658,
+              "tn": 159373,
+              "precision": 0.7531914893617021,
+              "recall": 0.5735580038885288,
+              "fpr": 0.0018163256358705523,
+              "f1": 0.6512141280353201
+            },
+            "detected_positive_accounts": {
+              "transactions": 885,
+              "payer_accounts": 701,
+              "receiver_accounts": 885,
+              "either_accounts": 1535
+            },
+            "false_positive_accounts": {
+              "transactions": 290,
+              "payer_accounts": 290,
+              "receiver_accounts": 290,
+              "either_accounts": 578
+            }
+          },
+          "1-4": {
+            "samples": 1572134,
+            "positives": 2167,
+            "payer_accounts": 384539,
+            "receiver_accounts": 552181,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 1572134,
+              "positives": 2167,
+              "negatives": 1569967,
+              "alerts": 1314,
+              "tp": 993,
+              "fp": 321,
+              "fn": 1174,
+              "tn": 1569646,
+              "precision": 0.7557077625570776,
+              "recall": 0.4582371942778034,
+              "fpr": 0.0002044628963538724,
+              "f1": 0.5705257110025854
+            },
+            "detected_positive_accounts": {
+              "transactions": 993,
+              "payer_accounts": 848,
+              "receiver_accounts": 803,
+              "either_accounts": 1568
+            },
+            "false_positive_accounts": {
+              "transactions": 321,
+              "payer_accounts": 317,
+              "receiver_accounts": 310,
+              "either_accounts": 624
+            }
+          },
+          ">=5": {
+            "samples": 2863629,
+            "positives": 2697,
+            "payer_accounts": 422759,
+            "receiver_accounts": 463442,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 2863629,
+              "positives": 2697,
+              "negatives": 2860932,
+              "alerts": 1804,
+              "tp": 1558,
+              "fp": 246,
+              "fn": 1139,
+              "tn": 2860686,
+              "precision": 0.8636363636363636,
+              "recall": 0.5776789024842417,
+              "fpr": 8.598596541266971e-05,
+              "f1": 0.6922906020884247
+            },
+            "detected_positive_accounts": {
+              "transactions": 1558,
+              "payer_accounts": 1209,
+              "receiver_accounts": 865,
+              "either_accounts": 1924
+            },
+            "false_positive_accounts": {
+              "transactions": 246,
+              "payer_accounts": 243,
+              "receiver_accounts": 227,
+              "either_accounts": 468
+            }
+          }
+        },
+        "receiver_support_7d": {
+          "not_applicable": {
+            "samples": 92037,
+            "positives": 13,
+            "payer_accounts": 20212,
+            "receiver_accounts": 20212,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 92037,
+              "positives": 13,
+              "negatives": 92024,
+              "alerts": 4,
+              "tp": 2,
+              "fp": 2,
+              "fn": 11,
+              "tn": 92022,
+              "precision": 0.5,
+              "recall": 0.15384615384615385,
+              "fpr": 2.1733460836303573e-05,
+              "f1": 0.23529411764705882
+            },
+            "detected_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            },
+            "false_positive_accounts": {
+              "transactions": 2,
+              "payer_accounts": 2,
+              "receiver_accounts": 2,
+              "either_accounts": 2
+            }
+          },
+          "0": {
+            "samples": 25771,
+            "positives": 1096,
+            "payer_accounts": 24231,
+            "receiver_accounts": 24490,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 25771,
+              "positives": 1096,
+              "negatives": 24675,
+              "alerts": 831,
+              "tp": 656,
+              "fp": 175,
+              "fn": 440,
+              "tn": 24500,
+              "precision": 0.789410348977136,
+              "recall": 0.5985401459854015,
+              "fpr": 0.0070921985815602835,
+              "f1": 0.6808510638297872
+            },
+            "detected_positive_accounts": {
+              "transactions": 656,
+              "payer_accounts": 531,
+              "receiver_accounts": 656,
+              "either_accounts": 1158
+            },
+            "false_positive_accounts": {
+              "transactions": 175,
+              "payer_accounts": 175,
+              "receiver_accounts": 175,
+              "either_accounts": 349
+            }
+          },
+          "1-4": {
+            "samples": 80926,
+            "positives": 1264,
+            "payer_accounts": 66040,
+            "receiver_accounts": 49779,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 80926,
+              "positives": 1264,
+              "negatives": 79662,
+              "alerts": 735,
+              "tp": 565,
+              "fp": 170,
+              "fn": 699,
+              "tn": 79492,
+              "precision": 0.7687074829931972,
+              "recall": 0.44699367088607594,
+              "fpr": 0.002134016218523261,
+              "f1": 0.5652826413206603
+            },
+            "detected_positive_accounts": {
+              "transactions": 565,
+              "payer_accounts": 521,
+              "receiver_accounts": 454,
+              "either_accounts": 964
+            },
+            "false_positive_accounts": {
+              "transactions": 170,
+              "payer_accounts": 170,
+              "receiver_accounts": 165,
+              "either_accounts": 334
+            }
+          },
+          ">=5": {
+            "samples": 4490272,
+            "positives": 4047,
+            "payer_accounts": 509210,
+            "receiver_accounts": 704809,
+            "operating_point": {
+              "threshold": 0.9872702360153198,
+              "samples": 4490272,
+              "positives": 4047,
+              "negatives": 4486225,
+              "alerts": 2727,
+              "tp": 2215,
+              "fp": 512,
+              "fn": 1832,
+              "tn": 4485713,
+              "precision": 0.8122478914558122,
+              "recall": 0.5473190017296763,
+              "fpr": 0.00011412713361456459,
+              "f1": 0.6539710658399763
+            },
+            "detected_positive_accounts": {
+              "transactions": 2215,
+              "payer_accounts": 1658,
+              "receiver_accounts": 1383,
+              "either_accounts": 2770
+            },
+            "false_positive_accounts": {
+              "transactions": 512,
+              "payer_accounts": 505,
+              "receiver_accounts": 487,
+              "either_accounts": 989
+            }
+          }
+        }
+      }
+    }
+  ],
+  "best": {
+    "name": "lr_only",
+    "model_path": "result\\gnn_tuning_v1\\trials\\lr_only\\final_model.pt",
+    "model_sha256": "b8c18e99903dd28f84c8a5d45ded34314f7b7b5a2cd5e25c23495ec5ade57d3a",
+    "precision80": {
+      "threshold": 0.945133626461029,
+      "samples": 4689006,
+      "positives": 6420,
+      "negatives": 4682586,
+      "alerts": 4413,
+      "tp": 3533,
+      "fp": 880,
+      "fn": 2887,
+      "tn": 4681706,
+      "precision": 0.8005891683661908,
+      "recall": 0.5503115264797508,
+      "fpr": 0.00018793034447205027,
+      "f1": 0.6522662235761101
+    },
+    "non_ach_precision80": {
+      "threshold": 0.945133626461029,
+      "samples": 4104569,
+      "positives": 715,
+      "negatives": 4103854,
+      "alerts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 715,
+      "tn": 4103854,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "f1": 0.0
+    }
+  },
+  "selection_reason": "No new candidate meets all three balance gates; retain frozen lr_only",
+  "requirements": {
+    "precision_min": 0.8,
+    "overall_tp_min": 3469,
+    "non_ach_tp_min": 143,
+    "validation_targets": 4689006,
+    "validation_positives": 6420,
+    "non_ach_positives": 715
+  },
+  "paired_changes": {
+    "features_only -> features_pruned": {
+      "available": true,
+      "before_threshold": 0.9911800026893616,
+      "after_threshold": 0.9808512926101685,
+      "gained_tp": {
+        "transactions": 102,
+        "payer_accounts": 100,
+        "receiver_accounts": 96,
+        "either_accounts": 194
+      },
+      "lost_tp": {
+        "transactions": 167,
+        "payer_accounts": 163,
+        "receiver_accounts": 161,
+        "either_accounts": 315
+      },
+      "new_fp": {
+        "transactions": 261,
+        "payer_accounts": 260,
+        "receiver_accounts": 259,
+        "either_accounts": 517
+      },
+      "removed_fp": {
+        "transactions": 279,
+        "payer_accounts": 278,
+        "receiver_accounts": 278,
+        "either_accounts": 556
+      },
+      "retained_tp": {
+        "transactions": 3368,
+        "payer_accounts": 2415,
+        "receiver_accounts": 2371,
+        "either_accounts": 4256
+      }
+    },
+    "features_pruned -> features_balanced": {
+      "available": true,
+      "before_threshold": 0.9808512926101685,
+      "after_threshold": 0.9872702360153198,
+      "gained_tp": {
+        "transactions": 94,
+        "payer_accounts": 90,
+        "receiver_accounts": 94,
+        "either_accounts": 180
+      },
+      "lost_tp": {
+        "transactions": 126,
+        "payer_accounts": 124,
+        "receiver_accounts": 120,
+        "either_accounts": 238
+      },
+      "new_fp": {
+        "transactions": 243,
+        "payer_accounts": 243,
+        "receiver_accounts": 243,
+        "either_accounts": 484
+      },
+      "removed_fp": {
+        "transactions": 248,
+        "payer_accounts": 246,
+        "receiver_accounts": 244,
+        "either_accounts": 488
+      },
+      "retained_tp": {
+        "transactions": 3344,
+        "payer_accounts": 2407,
+        "receiver_accounts": 2361,
+        "either_accounts": 4238
+      }
+    },
+    "lr_only -> features_only": {
+      "available": true,
+      "before_threshold": 0.945133626461029,
+      "after_threshold": 0.9911800026893616,
+      "gained_tp": {
+        "transactions": 138,
+        "payer_accounts": 138,
+        "receiver_accounts": 138,
+        "either_accounts": 272
+      },
+      "lost_tp": {
+        "transactions": 136,
+        "payer_accounts": 135,
+        "receiver_accounts": 129,
+        "either_accounts": 260
+      },
+      "new_fp": {
+        "transactions": 312,
+        "payer_accounts": 312,
+        "receiver_accounts": 312,
+        "either_accounts": 621
+      },
+      "removed_fp": {
+        "transactions": 310,
+        "payer_accounts": 310,
+        "receiver_accounts": 308,
+        "either_accounts": 615
+      },
+      "retained_tp": {
+        "transactions": 3397,
+        "payer_accounts": 2439,
+        "receiver_accounts": 2383,
+        "either_accounts": 4284
+      }
+    },
+    "lr_only -> features_pruned": {
+      "available": true,
+      "before_threshold": 0.945133626461029,
+      "after_threshold": 0.9808512926101685,
+      "gained_tp": {
+        "transactions": 109,
+        "payer_accounts": 106,
+        "receiver_accounts": 106,
+        "either_accounts": 210
+      },
+      "lost_tp": {
+        "transactions": 172,
+        "payer_accounts": 166,
+        "receiver_accounts": 163,
+        "either_accounts": 324
+      },
+      "new_fp": {
+        "transactions": 276,
+        "payer_accounts": 275,
+        "receiver_accounts": 275,
+        "either_accounts": 545
+      },
+      "removed_fp": {
+        "transactions": 292,
+        "payer_accounts": 291,
+        "receiver_accounts": 291,
+        "either_accounts": 581
+      },
+      "retained_tp": {
+        "transactions": 3361,
+        "payer_accounts": 2417,
+        "receiver_accounts": 2355,
+        "either_accounts": 4243
+      }
+    },
+    "lr_only -> features_balanced": {
+      "available": true,
+      "before_threshold": 0.945133626461029,
+      "after_threshold": 0.9872702360153198,
+      "gained_tp": {
+        "transactions": 104,
+        "payer_accounts": 100,
+        "receiver_accounts": 104,
+        "either_accounts": 202
+      },
+      "lost_tp": {
+        "transactions": 199,
+        "payer_accounts": 193,
+        "receiver_accounts": 183,
+        "either_accounts": 365
+      },
+      "new_fp": {
+        "transactions": 317,
+        "payer_accounts": 317,
+        "receiver_accounts": 317,
+        "either_accounts": 631
+      },
+      "removed_fp": {
+        "transactions": 338,
+        "payer_accounts": 336,
+        "receiver_accounts": 332,
+        "either_accounts": 668
+      },
+      "retained_tp": {
+        "transactions": 3334,
+        "payer_accounts": 2402,
+        "receiver_accounts": 2353,
+        "either_accounts": 4227
+      }
+    }
+  },
+  "sidecar_identity": {
+    "manifest_sha256": "0a28fc66c68d5c34308311295caefb71286eb7de75b2afb5ef52b57147fe5452",
+    "config_sha256": "b3029315c7950820cf3a7767e13f52e8579f92490268a46891585d507b21900f",
+    "contract_sha256": "ba2f7a4c0db939b5721e3e450d7191fbb383f6fc7cc7085ca601d0e9f8ca5a0b"
+  },
+  "support_grouping": {
+    "windows": [
+      "24h",
+      "72h",
+      "7d"
+    ],
+    "roles": [
+      "payer",
+      "receiver"
+    ],
+    "buckets": [
+      "0",
+      "1-4",
+      ">=5",
+      "not_applicable"
+    ],
+    "count_24h": "Frozen original R; SHA, full edge ID, timestamp and applicability verified",
+    "count_72h": "Verified sidecar log1p count bucket; no inverse integer reconstruction",
+    "count_7d": "Verified sidecar raw integer count"
+  },
+  "code_sha256": {
+    "v2_evaluate.py": "5e583e702d47725c00295842e521c1adc23345981007701313406eafddbdaabb",
+    "v2_compare.py": "aef28ea5a50ad52979decd4dcc26ca2b3d1a2863478ce11eab41fb3501460d52"
+  },
+  "completed_at": "2026-10-03T05:00:28.954770+00:00",
+  "scope": "Validation development/selection evidence only; Test 2022-09-14..16 and tail untouched"
+}

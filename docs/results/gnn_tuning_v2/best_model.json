@@ -1,0 +1,9 @@
+{
+  "name": "lr_only",
+  "path": "result\\gnn_tuning_v1\\trials\\lr_only\\final_model.pt",
+  "sha256": "b8c18e99903dd28f84c8a5d45ded34314f7b7b5a2cd5e25c23495ec5ade57d3a",
+  "validation_threshold": 0.945133626461029,
+  "selection_reason": "No new candidate meets all three balance gates; retain frozen lr_only",
+  "comparison_sha256": "7de3332e9c50e1603dc0b73e6a474057784146db47a3d3d22f132c1e17d0cf5f",
+  "test_evaluated": false
+}

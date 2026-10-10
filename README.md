@@ -17,13 +17,13 @@
 - `dashboard/template.html`：不含交易数据的看板模板。
 - `docs/`：公开的汇总说明。
 
-原始交易、账户档案、逐笔导出、特征与图缓存、权重、日志、本机结果和环境不上传。历史详细分析文档保留在原工作区；GitHub 不包含这些报告。
+研究报告和交接文档已包含在仓库。原始合成数据、已完成权重及配置通过 GitHub Release 提供；图和特征缓存、日志与本机环境不进入 Git。请从 [GPT 阅读入口](docs/REVIEW_GUIDE.md) 查看报告顺序、附件及校验说明。
 
 ## 环境和入口
 
 数据工程依赖见 `requirements.txt`；GPU 训练使用独立 Python 3.11 环境与 `requirements-gnn-gpu.txt`（PyTorch 2.7.1 CUDA 12.6）；早期 CPU 验收依赖另见 `requirements-gnn-cpu.txt`，不要把三个依赖清单装进同一环境。
 
-这是已有研究工作区的源码发布，不包含数据和预计算缓存，不能克隆后直接启动完整训练。需自行取得原数据、遵循原数据许可，按代码中的来源校验建立银层及冻结索引。Windows Spark 入口还需要本地 JDK 和 Hadoop 本地文件系统兼容 JAR；路径参数见 `scripts/daily_gnn.ps1`。
+这是已有研究工作区的源码发布。数据与已完成模型在 Release，预计算缓存不包含，不能克隆后直接启动完整训练。需按来源哈希校验原数据、遵循原数据许可，再建立银层及冻结索引。Windows Spark 入口还需要本地 JDK 和 Hadoop 本地文件系统兼容 JAR；路径参数见 `scripts/daily_gnn.ps1`。
 
 已有完整工作区的种子重复实验入口：
 
