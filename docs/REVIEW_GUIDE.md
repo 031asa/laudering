@@ -2,7 +2,7 @@
 
 1. 先读 [实验状态](EXPERIMENT_STATUS.md)：数据划分、配方、已完成指标和结论边界。
 2. [工程历史记录](ENGINEERING_HISTORY.md)保留原README中的按日期进展；其中旧状态只代表当时。再读根目录 `GPTPro交接_GNN交易反洗钱项目_2026-10-02.md`：完整沿革与审计。按日期理解旧的 Test 封存说明；2026-10-10 已授权最终 Test。
-3. 本目录 `results/` 保存发布时已完成实验的比较报告和种子结果，便于直接引用数值。种子重复尚未全部结束，不能把单次胜负当作稳定结论。
+3. 本目录 `results/` 保存发布时已完成实验的比较报告和种子结果，便于直接引用数值。全部种子重复与最终Test已完成；不能把单次胜负当作稳定结论。
 4. `scripts/gnn_features/model.py` 是 GINE 架构，`v2_adapter.py` 定义 A 的输入扩展，`repeat_common.py` 与 `repeat_train.py` 定义固定配方种子重复。
 5. `scripts/gnn_final_test/` 是独立最终 Test 流程；共八个预先指定模型，各用自身 Validation 阈值。没有 Test 阈值寻优或最佳种子选择。
 
@@ -18,5 +18,4 @@
 
 ## 当前最终 Test 状态
 
-2026-10-10 已通过10项工程检查并启动历史归档准备，与种子重复训练独立并行。完整 Test 为6,883,233笔、6,932正例。尚无 Test 指标；正式全量特征核验及真实CUDA推理验收会在流程中执行。09-17以后尾部继续封存。下一阶段是否改架构，等待全部结果后讨论；当前没有启动新架构实验。
-
+2026-10-11全部八模型Test完成且核验通过。详见[最终报告](results/final_test/最终测试结果.md)与[当前状态](EXPERIMENT_STATUS.md)。Release新增final-models-and-results-20261011.zip，含全部八模型权重及最终报告，SHA见final_release_assets.json。旧20261010快照保留，原始数据包不变。尾部继续封存，部署不替换。

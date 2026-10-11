@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "new_trainings": 6,
+  "strictly_loaded_models": 8,
+  "validation_prediction_blocks_replayed_by_completed_pipeline": 1576,
+  "test_prediction_blocks_replayed_by_completed_pipeline_and_rehashed": 1968,
+  "validation_comparison_sha256": "1b5849bc0664154b11159522bb991caaa0757a2d9bdaf52d03289f21dd6e58e2",
+  "test_comparison_sha256": "7eeb0191227dcfe96d81f8fc366ba1a621b32bfa1698ffdf906b37362a7aba45",
+  "summary_recomputed": true,
+  "threshold_bindings_verified": true
+}
