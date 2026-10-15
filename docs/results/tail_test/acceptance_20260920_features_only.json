@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "config_sha256": "fe25a50722f47d9383db618dfe07c9749811ea2e40d06674ca326f952687611c",
+  "device": "cuda",
+  "targets": 1,
+  "strict_reload": true,
+  "repeat_forward_matches": true,
+  "max_abs_difference": 0.0,
+  "scope": "Inference only, no optimizer or training; frozen trained model"
+}

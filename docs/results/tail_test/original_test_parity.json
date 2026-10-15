@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "config_sha256": "fe25a50722f47d9383db618dfe07c9749811ea2e40d06674ca326f952687611c",
+  "targets": 64,
+  "models": 8,
+  "R_N_E_graph_and_A_match": true,
+  "published_predictions_match": true
+}

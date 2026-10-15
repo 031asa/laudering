@@ -18,4 +18,8 @@
 
 ## 当前最终 Test 状态
 
-2026-10-11全部八模型Test完成且核验通过。详见[最终报告](results/final_test/最终测试结果.md)与[当前状态](EXPERIMENT_STATUS.md)。Release新增final-models-and-results-20261011.zip，含全部八模型权重及最终报告，SHA见final_release_assets.json。旧20261010快照保留，原始数据包不变。尾部继续封存，部署不替换。
+2026-10-11全部八模型Test完成且核验通过。详见[最终报告](results/final_test/最终测试结果.md)与[当前状态](EXPERIMENT_STATUS.md)。Release新增final-models-and-results-20261011.zip，含全部八模型权重及最终报告，SHA见final_release_assets.json。旧20261010快照保留，原始数据包不变。此处记录原最终Test交付；后续尾部追加分析见下文，部署不替换。
+
+## 尾部追加分析（已完成）
+
+用户随后授权09-17..28的6,987笔尾部数据追加评估。阅读[尾部报告](results/tail_test/尾部追加评估结果.md)、[完整比较](results/tail_test/comparison.json)与[核验](results/tail_test/final_audit.json)。实现位于scripts/gnn_tail_test，复用全部8模型及原Validation阈值；不训练、不寻优。原Test、尾部、合并分别报告。尾部正例比例异常高，合并F1约69%—70%属于数据构成改变后的事后敏感性结果，不能替代原Test或证明模型改善。

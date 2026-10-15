@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "tests": 3,
+  "source_sha256": {
+    "scripts\\gnn_tail_test\\__init__.py": "0e8645528a42bb673fd06a1d4474ef0b8b4d9a243f8237a97a16db5262a780e3",
+    "scripts\\gnn_tail_test\\archive.py": "67f8f99d4556a9ecd75981b91b1bc4015896f91a1b62b892f7fcc016083c0f0e",
+    "scripts\\gnn_tail_test\\compare.py": "0bc56c3265e8398f6124282a37836ae4a768e1c14409bdc045ea3acf6928efaa",
+    "scripts\\gnn_tail_test\\edge_store.py": "be47ac7f904789c70ee70e01efade5884a029a36c45f26e48f9f80f9b94c8bba",
+    "scripts\\gnn_tail_test\\pipeline.py": "6f047cdf4fdd72e3011f6f14a9700d10482cff7c9c27019fed94521c2b5a40d8",
+    "tests\\test_gnn_tail_test.py": "6afeb12fe514b126498afb46823f7c5e0032b8e678a6b95dee375f6bb9921970",
+    "scripts\\start_gnn_tail_test.ps1": "073343c3863f4adb0ec8445a707d81eb5ca1ac76e1ca21a6f17895dea048bcf5"
+  },
+  "validation": [
+    "append full original Test history prefix unchanged and verified resume",
+    "tail label/future invariance plus production A versus independent exact-sort reference",
+    "paired account set differences"
+  ],
+  "real_original_Test_CUDA_input_and_prediction_parity": "mandatory at pipeline start",
+  "full_tail_A_reference": "mandatory for every target"
+}

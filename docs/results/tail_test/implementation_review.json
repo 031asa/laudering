@@ -1,0 +1,15 @@
+{
+  "scope": "Isolated post-hoc tail evaluation requested 2026-10-12",
+  "unchanged_sources": {
+    "gnn_features": "verified by frozen plan",
+    "gnn_final_test": "verified by original protocol"
+  },
+  "inherited_archive_sha256": "381cd401abfb98119751f1951597f77a0e3c4e4062a8ac06e2d70192be000baa",
+  "archive_changes": "Only source Test-prefix archive, authorized tail dates/split and prefix boundary; same identity/encoding/history/index verification",
+  "feature_path": "Same frozen FeatureEngine.target, TemporalBatchBuilder and production A role_features, with independent compute_selected checks for all tail rows",
+  "original_test_parity": "Must match complete first original-Test batch R/N/E/graph/A and all eight published model predictions before tail inference",
+  "models": "All 8, strict loaded, existing Validation bindings",
+  "no_training": true,
+  "no_threshold_search": true,
+  "original_results_preserved": true
+}
